@@ -1,0 +1,89 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - HWaterflow (1.0.2)
+  - HWPhotoPicker (0.0.8):
+    - MBProgressHUD (= 1.0.0)
+    - SDWebImage (= 3.8.1)
+  - IQKeyboardManager (4.0.8)
+  - JSONKit (1.5pre)
+  - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - UMengUShare/Core (6.4.1):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.1)
+  - UMengUShare/Social/ReducedQQ (6.4.1):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.1):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.4.1):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI (6.4.1):
+    - UMengUShare/Core
+  - VPImageCropper (0.0.4)
+  - WebViewJavascriptBridge (6.0.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - FMDB (= 2.6.2)
+  - HWaterflow
+  - HWPhotoPicker
+  - IQKeyboardManager
+  - JSONKit (= 1.5pre)
+  - Masonry (= 1.0.1)
+  - MBProgressHUD (= 1.0.0)
+  - MJExtension (= 3.0.13)
+  - MJRefresh (= 3.1.12)
+  - SDCycleScrollView (= 1.65)
+  - SDCycleScrollView (~> 1.64)
+  - SDWebImage (= 3.8.1)
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - VPImageCropper (= 0.0.4)
+  - WebViewJavascriptBridge (= 6.0.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  HWaterflow: 266c175d3508b8edb7b5222b831d6621410afe3d
+  HWPhotoPicker: ee1f9dd82dd6af93a031d100f5c8810d3beaf184
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  JSONKit: bae313ce6a6c444f40489a6c0b023f399888871f
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  UMengUShare: 7756e2e46ceba04e3000fb2c9b1d3f61784ca2ff
+  VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+
+PODFILE CHECKSUM: 1d58fa1704cccf2621d46cf830d989aaee106160
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>ECHotViewController</string>
+	<string>ECClinicItemInfoViewController</string>
+	<string>ECClinicItemsViewController</string>
+	<string>ECMemberCardViewController</string>
+	<string>ECAdvancePaymentController</string>
+	<string>ECFamilyArchiveController</string>
+	<string>ECDoctorDetailInfoViewController</string>
+	<string>ECClinicDoctorListViewController</string>
+	<string>ECBillController</string>
+	<string>ECAppointmentListViewController</string>
+	<string>ECClinicManagerViewController</string>
+	<string>ECFeedbackController</string>
+	<string>ECShareCashCouponViewController</string>
+	<string>ECCashCouponViewController</string>
+	<string>ECMyInfoViewController</string>
+	<string>ECChatViewController</string>
+	<string>ECNotificationViewController</string>
+	<string>ECSplitViewController</string>
+	<string>ECClinicController</string>
+	<string>ECMessageListController</string>
+	<string>ECMineController</string>
+</array>
+</plist>

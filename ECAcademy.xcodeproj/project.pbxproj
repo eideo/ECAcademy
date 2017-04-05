@@ -1,0 +1,1420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DEF4B40666C0E084378C4BC /* libPods-ECAcademy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C766C0B3E5C678AA6CC72D /* libPods-ECAcademy.a */; };
+		BC0FACDA1E8E2AD400203FF7 /* Autority.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACBA1E8E2AD400203FF7 /* Autority.plist */; };
+		BC0FACDB1E8E2AD400203FF7 /* ECBaseNavController+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACBC1E8E2AD400203FF7 /* ECBaseNavController+Login.m */; };
+		BC0FACDC1E8E2AD400203FF7 /* ECBindUserMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */; };
+		BC0FACDD1E8E2AD400203FF7 /* ECBindUserMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */; };
+		BC0FACDE1E8E2AD400203FF7 /* ECForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */; };
+		BC0FACDF1E8E2AD400203FF7 /* ECForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */; };
+		BC0FACE01E8E2AD400203FF7 /* ECLoginGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */; };
+		BC0FACE11E8E2AD400203FF7 /* ECLoginGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */; };
+		BC0FACE21E8E2AD400203FF7 /* ECLoginRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */; };
+		BC0FACE31E8E2AD400203FF7 /* ECLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */; };
+		BC0FACE41E8E2AD400203FF7 /* ECLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */; };
+		BC0FACE51E8E2AD400203FF7 /* ECPhoneLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */; };
+		BC0FACE61E8E2AD400203FF7 /* ECPhoneLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */; };
+		BC0FACE71E8E2AD400203FF7 /* ECSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */; };
+		BC0FACE81E8E2AD400203FF7 /* ECUserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD21E8E2AD400203FF7 /* ECUserRegisterViewController.m */; };
+		BC0FACE91E8E2AD400203FF7 /* ECUserRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */; };
+		BC0FACEA1E8E2AD400203FF7 /* ECUser+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD61E8E2AD400203FF7 /* ECUser+Manager.m */; };
+		BCF253FD1E8E369500703981 /* ECNetworkRequestManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */; };
+		BCF254F11E8E7E4900703981 /* ECScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF254EE1E8E7E4900703981 /* ECScanViewController.m */; };
+		BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF254F01E8E7E4900703981 /* ECScanViewController.xib */; };
+		D325D5CB1E89F12400A27A3A /* NSObject+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5C81E89F12400A27A3A /* NSObject+AOP.m */; };
+		D325D5CC1E89F12400A27A3A /* NSObject+RunTimeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5CA1E89F12400A27A3A /* NSObject+RunTimeUtility.m */; };
+		D325D5CF1E89F12B00A27A3A /* UIImage+ECExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5CE1E89F12B00A27A3A /* UIImage+ECExtensions.m */; };
+		D325D5D31E89F20900A27A3A /* ECCommenMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5D21E89F20900A27A3A /* ECCommenMethod.m */; };
+		D325D5D71E89F5A400A27A3A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5D61E89F5A400A27A3A /* UIView+Extension.m */; };
+		D325D5DA1E89F7B700A27A3A /* NSString+CalculateSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5D91E89F7B700A27A3A /* NSString+CalculateSize.m */; };
+		D325D5DD1E89F86900A27A3A /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5DC1E89F86900A27A3A /* NSString+Date.m */; };
+		D325D5E11E89FAD800A27A3A /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5E01E89FAD800A27A3A /* UIButton+Extension.m */; };
+		D325D5E41E89FC8F00A27A3A /* UIView+CommonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5E31E89FC8F00A27A3A /* UIView+CommonMethods.m */; };
+		D325D5E81E8A03E000A27A3A /* ECBaseTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5E71E8A03E000A27A3A /* ECBaseTabbarViewController.m */; };
+		D325D5EB1E8A085B00A27A3A /* ECBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5EA1E8A085B00A27A3A /* ECBaseTableView.m */; };
+		D325D5EF1E8A10FB00A27A3A /* ECMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5EE1E8A10FB00A27A3A /* ECMenuView.m */; };
+		D325D5F41E8A4B1500A27A3A /* ECMainCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */; };
+		D325D5F51E8A4B1500A27A3A /* ECMainCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */; };
+		D325D5F81E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5F71E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m */; };
+		D3625C911E8B98DE00446292 /* ECCourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3625C901E8B98DE00446292 /* ECCourseListViewController.m */; };
+		D3625C941E8BAEDF00446292 /* ECNetworkRequestManager+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D3625C931E8BAEDF00446292 /* ECNetworkRequestManager+Common.m */; };
+		D39B17CE1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B17CD1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m */; };
+		D39B17D81E8902A20002308D /* ECNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B17D71E8902A20002308D /* ECNetworkRequestManager.m */; };
+		D3AB421A1E8CF9FA00F7FF3C /* ECBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB42191E8CF9FA00F7FF3C /* ECBaseWebViewController.m */; };
+		D3AB42201E8CFA8400F7FF3C /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB421D1E8CFA8400F7FF3C /* NJKWebViewProgress.m */; };
+		D3AB42211E8CFA8400F7FF3C /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB421F1E8CFA8400F7FF3C /* NJKWebViewProgressView.m */; };
+		D3AB42241E8E055700F7FF3C /* ECBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB42231E8E055700F7FF3C /* ECBottomPopView.m */; };
+		D3AB42261E8E23B100F7FF3C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB42251E8E23B100F7FF3C /* libsqlite3.tbd */; };
+		D3AB42281E8E23C500F7FF3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB42271E8E23C500F7FF3C /* CoreGraphics.framework */; };
+		D3AB422A1E8E23CF00F7FF3C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB42291E8E23CF00F7FF3C /* SystemConfiguration.framework */; };
+		D3AB422C1E8E23D700F7FF3C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB422B1E8E23D700F7FF3C /* CoreTelephony.framework */; };
+		D3AB422E1E8E23F100F7FF3C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB422D1E8E23F100F7FF3C /* libc++.tbd */; };
+		D3AB42301E8E23F800F7FF3C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AB422F1E8E23F800F7FF3C /* libz.tbd */; };
+		D3AB42331E8E2A4200F7FF3C /* ECPlatformShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB42321E8E2A4200F7FF3C /* ECPlatformShareManager.m */; };
+		D3C666981E8F41AA0025E432 /* ECBaseFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C666971E8F41AA0025E432 /* ECBaseFilterView.m */; };
+		D3CE8D5B1E83989500E8F2E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8D5A1E83989500E8F2E9 /* main.m */; };
+		D3CE8D5E1E83989500E8F2E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8D5D1E83989500E8F2E9 /* AppDelegate.m */; };
+		D3CE8D671E83989500E8F2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8D651E83989500E8F2E9 /* Main.storyboard */; };
+		D3CE8D691E83989500E8F2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8D681E83989500E8F2E9 /* Assets.xcassets */; };
+		D3CE8D6C1E83989500E8F2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8D6A1E83989500E8F2E9 /* LaunchScreen.storyboard */; };
+		D3CE8D771E83989500E8F2E9 /* ECAcademyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8D761E83989500E8F2E9 /* ECAcademyTests.m */; };
+		D3CE8D821E83989500E8F2E9 /* ECAcademyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8D811E83989500E8F2E9 /* ECAcademyUITests.m */; };
+		D3CE8DB71E84EE5500E8F2E9 /* ECMainCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DB61E84EE5500E8F2E9 /* ECMainCourseViewController.m */; };
+		D3CE8DBA1E84EE7600E8F2E9 /* ECBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DB91E84EE7600E8F2E9 /* ECBaseViewController.m */; };
+		D3CE8DBD1E84EE9100E8F2E9 /* ECBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DBC1E84EE9100E8F2E9 /* ECBaseNavController.m */; };
+		D3CE8DC01E84EEE600E8F2E9 /* ECMainTrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DBF1E84EEE600E8F2E9 /* ECMainTrainViewController.m */; };
+		D3CE8DC31E84EF0500E8F2E9 /* ECMainMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DC21E84EF0500E8F2E9 /* ECMainMyViewController.m */; };
+		D3CE8DD01E84F47100E8F2E9 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DCF1E84F47100E8F2E9 /* UIViewController+HUD.m */; };
+		D3CE8DD51E84F6EC00E8F2E9 /* common.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8DD41E84F6EC00E8F2E9 /* common.sqlite */; };
+		D3CE8DD71E84F6F100E8F2E9 /* cache.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8DD61E84F6F100E8F2E9 /* cache.sqlite */; };
+		D3CE8DDB1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3CE8DDA1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist */; };
+		D3CE8DE21E84F74000E8F2E9 /* ECDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DDD1E84F74000E8F2E9 /* ECDataBaseManager.m */; };
+		D3CE8DE31E84F74000E8F2E9 /* ECDataBaseManager+Read.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DDF1E84F74000E8F2E9 /* ECDataBaseManager+Read.m */; };
+		D3CE8DE41E84F74000E8F2E9 /* ECDataBaseManager+Write.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DE11E84F74000E8F2E9 /* ECDataBaseManager+Write.m */; };
+		D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DE71E84F76B00E8F2E9 /* ECUser.m */; };
+		D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */; };
+		D3CE8DF01E84F82A00E8F2E9 /* ECBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */; };
+		D3DE4B611E8B5F4100DF0584 /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */; };
+		D3DE4B641E8B5F4C00DF0584 /* UIAlertView+BlockKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4B631E8B5F4C00DF0584 /* UIAlertView+BlockKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3CE8D731E83989500E8F2E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3CE8D4E1E83989500E8F2E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3CE8D551E83989500E8F2E9;
+			remoteInfo = ECAcademy;
+		};
+		D3CE8D7E1E83989500E8F2E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3CE8D4E1E83989500E8F2E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3CE8D551E83989500E8F2E9;
+			remoteInfo = ECAcademy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D84C1673A0FEB640627260D /* Pods-ECAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECAcademy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECAcademy/Pods-ECAcademy.debug.xcconfig"; sourceTree = "<group>"; };
+		993EEE4F115BCC4AE51BC6D5 /* Pods-ECAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECAcademy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECAcademy/Pods-ECAcademy.release.xcconfig"; sourceTree = "<group>"; };
+		A1C766C0B3E5C678AA6CC72D /* libPods-ECAcademy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECAcademy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0FACBA1E8E2AD400203FF7 /* Autority.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Autority.plist; sourceTree = "<group>"; };
+		BC0FACBB1E8E2AD400203FF7 /* ECBaseNavController+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECBaseNavController+Login.h"; sourceTree = "<group>"; };
+		BC0FACBC1E8E2AD400203FF7 /* ECBaseNavController+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECBaseNavController+Login.m"; sourceTree = "<group>"; };
+		BC0FACBE1E8E2AD400203FF7 /* ECBindUserMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBindUserMobileViewController.h; sourceTree = "<group>"; };
+		BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBindUserMobileViewController.m; sourceTree = "<group>"; };
+		BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECBindUserMobileViewController.xib; sourceTree = "<group>"; };
+		BC0FACC11E8E2AD400203FF7 /* ECForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECForgetPasswordViewController.h; sourceTree = "<group>"; };
+		BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECForgetPasswordViewController.m; sourceTree = "<group>"; };
+		BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		BC0FACC41E8E2AD400203FF7 /* ECLoginGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginGuideViewController.h; sourceTree = "<group>"; };
+		BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginGuideViewController.m; sourceTree = "<group>"; };
+		BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginGuideViewController.xib; sourceTree = "<group>"; };
+		BC0FACC71E8E2AD400203FF7 /* ECLoginRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginRootController.h; sourceTree = "<group>"; };
+		BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginRootController.m; sourceTree = "<group>"; };
+		BC0FACC91E8E2AD400203FF7 /* ECLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginViewController.h; sourceTree = "<group>"; };
+		BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginViewController.m; sourceTree = "<group>"; };
+		BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginViewController.xib; sourceTree = "<group>"; };
+		BC0FACCC1E8E2AD400203FF7 /* ECPhoneLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPhoneLoginController.h; sourceTree = "<group>"; };
+		BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPhoneLoginController.m; sourceTree = "<group>"; };
+		BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECPhoneLoginController.xib; sourceTree = "<group>"; };
+		BC0FACCF1E8E2AD400203FF7 /* ECSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSetPasswordViewController.h; sourceTree = "<group>"; };
+		BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSetPasswordViewController.m; sourceTree = "<group>"; };
+		BC0FACD11E8E2AD400203FF7 /* ECUserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECUserRegisterViewController.h; sourceTree = "<group>"; };
+		BC0FACD21E8E2AD400203FF7 /* ECUserRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECUserRegisterViewController.m; sourceTree = "<group>"; };
+		BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECUserRegisterViewController.xib; sourceTree = "<group>"; };
+		BC0FACD51E8E2AD400203FF7 /* ECUser+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECUser+Manager.h"; sourceTree = "<group>"; };
+		BC0FACD61E8E2AD400203FF7 /* ECUser+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECUser+Manager.m"; sourceTree = "<group>"; };
+		BCF253FB1E8E369500703981 /* ECNetworkRequestManager+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECNetworkRequestManager+User.h"; sourceTree = "<group>"; };
+		BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECNetworkRequestManager+User.m"; sourceTree = "<group>"; };
+		BCF254EE1E8E7E4900703981 /* ECScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECScanViewController.m; sourceTree = "<group>"; };
+		BCF254EF1E8E7E4900703981 /* ECScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECScanViewController.h; sourceTree = "<group>"; };
+		BCF254F01E8E7E4900703981 /* ECScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECScanViewController.xib; sourceTree = "<group>"; };
+		D325D5C71E89F12400A27A3A /* NSObject+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AOP.h"; sourceTree = "<group>"; };
+		D325D5C81E89F12400A27A3A /* NSObject+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOP.m"; sourceTree = "<group>"; };
+		D325D5C91E89F12400A27A3A /* NSObject+RunTimeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunTimeUtility.h"; sourceTree = "<group>"; };
+		D325D5CA1E89F12400A27A3A /* NSObject+RunTimeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunTimeUtility.m"; sourceTree = "<group>"; };
+		D325D5CD1E89F12B00A27A3A /* UIImage+ECExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ECExtensions.h"; sourceTree = "<group>"; };
+		D325D5CE1E89F12B00A27A3A /* UIImage+ECExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ECExtensions.m"; sourceTree = "<group>"; };
+		D325D5D11E89F20900A27A3A /* ECCommenMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCommenMethod.h; sourceTree = "<group>"; };
+		D325D5D21E89F20900A27A3A /* ECCommenMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCommenMethod.m; sourceTree = "<group>"; };
+		D325D5D51E89F5A400A27A3A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D325D5D61E89F5A400A27A3A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D325D5D81E89F7B700A27A3A /* NSString+CalculateSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CalculateSize.h"; sourceTree = "<group>"; };
+		D325D5D91E89F7B700A27A3A /* NSString+CalculateSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CalculateSize.m"; sourceTree = "<group>"; };
+		D325D5DB1E89F86900A27A3A /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
+		D325D5DC1E89F86900A27A3A /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
+		D325D5DF1E89FAD800A27A3A /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		D325D5E01E89FAD800A27A3A /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		D325D5E21E89FC8F00A27A3A /* UIView+CommonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CommonMethods.h"; sourceTree = "<group>"; };
+		D325D5E31E89FC8F00A27A3A /* UIView+CommonMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CommonMethods.m"; sourceTree = "<group>"; };
+		D325D5E61E8A03E000A27A3A /* ECBaseTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseTabbarViewController.h; sourceTree = "<group>"; };
+		D325D5E71E8A03E000A27A3A /* ECBaseTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseTabbarViewController.m; sourceTree = "<group>"; };
+		D325D5E91E8A085B00A27A3A /* ECBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseTableView.h; sourceTree = "<group>"; };
+		D325D5EA1E8A085B00A27A3A /* ECBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseTableView.m; sourceTree = "<group>"; };
+		D325D5ED1E8A10FB00A27A3A /* ECMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMenuView.h; sourceTree = "<group>"; };
+		D325D5EE1E8A10FB00A27A3A /* ECMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMenuView.m; sourceTree = "<group>"; };
+		D325D5F11E8A4B1500A27A3A /* ECMainCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainCourseCell.h; sourceTree = "<group>"; };
+		D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainCourseCell.m; sourceTree = "<group>"; };
+		D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECMainCourseCell.xib; sourceTree = "<group>"; };
+		D325D5F61E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECCommonMethods.h"; sourceTree = "<group>"; };
+		D325D5F71E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECCommonMethods.m"; sourceTree = "<group>"; };
+		D3625C8F1E8B98DE00446292 /* ECCourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseListViewController.h; sourceTree = "<group>"; };
+		D3625C901E8B98DE00446292 /* ECCourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseListViewController.m; sourceTree = "<group>"; };
+		D3625C921E8BAEDF00446292 /* ECNetworkRequestManager+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECNetworkRequestManager+Common.h"; sourceTree = "<group>"; };
+		D3625C931E8BAEDF00446292 /* ECNetworkRequestManager+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECNetworkRequestManager+Common.m"; sourceTree = "<group>"; };
+		D39B17CA1E88A22E0002308D /* CYLTableViewPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTableViewPlaceHolder.h; sourceTree = "<group>"; };
+		D39B17CB1E88A22E0002308D /* CYLTableViewPlaceHolderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTableViewPlaceHolderDelegate.h; sourceTree = "<group>"; };
+		D39B17CC1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CYLTableViewPlaceHolder.h"; sourceTree = "<group>"; };
+		D39B17CD1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CYLTableViewPlaceHolder.m"; sourceTree = "<group>"; };
+		D39B17D51E8902690002308D /* ECServerRequestFuncCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECServerRequestFuncCode.h; sourceTree = "<group>"; };
+		D39B17D61E8902A20002308D /* ECNetworkRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNetworkRequestManager.h; sourceTree = "<group>"; };
+		D39B17D71E8902A20002308D /* ECNetworkRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNetworkRequestManager.m; sourceTree = "<group>"; };
+		D3AB42181E8CF9FA00F7FF3C /* ECBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseWebViewController.h; sourceTree = "<group>"; };
+		D3AB42191E8CF9FA00F7FF3C /* ECBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseWebViewController.m; sourceTree = "<group>"; };
+		D3AB421C1E8CFA8400F7FF3C /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		D3AB421D1E8CFA8400F7FF3C /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		D3AB421E1E8CFA8400F7FF3C /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		D3AB421F1E8CFA8400F7FF3C /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		D3AB42221E8E055700F7FF3C /* ECBottomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBottomPopView.h; sourceTree = "<group>"; };
+		D3AB42231E8E055700F7FF3C /* ECBottomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBottomPopView.m; sourceTree = "<group>"; };
+		D3AB42251E8E23B100F7FF3C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D3AB42271E8E23C500F7FF3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D3AB42291E8E23CF00F7FF3C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D3AB422B1E8E23D700F7FF3C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D3AB422D1E8E23F100F7FF3C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D3AB422F1E8E23F800F7FF3C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D3AB42311E8E2A4200F7FF3C /* ECPlatformShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPlatformShareManager.h; sourceTree = "<group>"; };
+		D3AB42321E8E2A4200F7FF3C /* ECPlatformShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPlatformShareManager.m; sourceTree = "<group>"; };
+		D3C666961E8F41AA0025E432 /* ECBaseFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseFilterView.h; sourceTree = "<group>"; };
+		D3C666971E8F41AA0025E432 /* ECBaseFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseFilterView.m; sourceTree = "<group>"; };
+		D3CE8D561E83989500E8F2E9 /* ECAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CE8D5A1E83989500E8F2E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3CE8D5C1E83989500E8F2E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3CE8D5D1E83989500E8F2E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3CE8D661E83989500E8F2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3CE8D681E83989500E8F2E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3CE8D6B1E83989500E8F2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3CE8D6D1E83989500E8F2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CE8D721E83989500E8F2E9 /* ECAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CE8D761E83989500E8F2E9 /* ECAcademyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAcademyTests.m; sourceTree = "<group>"; };
+		D3CE8D781E83989500E8F2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CE8D7D1E83989500E8F2E9 /* ECAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CE8D811E83989500E8F2E9 /* ECAcademyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAcademyUITests.m; sourceTree = "<group>"; };
+		D3CE8D831E83989500E8F2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CE8DB01E83BC4000E8F2E9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D3CE8DB11E83BCD200E8F2E9 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		D3CE8DB51E84EE5500E8F2E9 /* ECMainCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainCourseViewController.h; sourceTree = "<group>"; };
+		D3CE8DB61E84EE5500E8F2E9 /* ECMainCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainCourseViewController.m; sourceTree = "<group>"; };
+		D3CE8DB81E84EE7600E8F2E9 /* ECBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseViewController.h; sourceTree = "<group>"; };
+		D3CE8DB91E84EE7600E8F2E9 /* ECBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseViewController.m; sourceTree = "<group>"; };
+		D3CE8DBB1E84EE9100E8F2E9 /* ECBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseNavController.h; sourceTree = "<group>"; };
+		D3CE8DBC1E84EE9100E8F2E9 /* ECBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseNavController.m; sourceTree = "<group>"; };
+		D3CE8DBE1E84EEE600E8F2E9 /* ECMainTrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainTrainViewController.h; sourceTree = "<group>"; };
+		D3CE8DBF1E84EEE600E8F2E9 /* ECMainTrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainTrainViewController.m; sourceTree = "<group>"; };
+		D3CE8DC11E84EF0500E8F2E9 /* ECMainMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainMyViewController.h; sourceTree = "<group>"; };
+		D3CE8DC21E84EF0500E8F2E9 /* ECMainMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainMyViewController.m; sourceTree = "<group>"; };
+		D3CE8DCE1E84F47100E8F2E9 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		D3CE8DCF1E84F47100E8F2E9 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		D3CE8DD41E84F6EC00E8F2E9 /* common.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.sqlite; sourceTree = "<group>"; };
+		D3CE8DD61E84F6F100E8F2E9 /* cache.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cache.sqlite; sourceTree = "<group>"; };
+		D3CE8DDA1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ECDoctorExpertListKey.plist; sourceTree = "<group>"; };
+		D3CE8DDC1E84F74000E8F2E9 /* ECDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECDataBaseManager.h; sourceTree = "<group>"; };
+		D3CE8DDD1E84F74000E8F2E9 /* ECDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECDataBaseManager.m; sourceTree = "<group>"; };
+		D3CE8DDE1E84F74000E8F2E9 /* ECDataBaseManager+Read.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECDataBaseManager+Read.h"; sourceTree = "<group>"; };
+		D3CE8DDF1E84F74000E8F2E9 /* ECDataBaseManager+Read.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECDataBaseManager+Read.m"; sourceTree = "<group>"; };
+		D3CE8DE01E84F74000E8F2E9 /* ECDataBaseManager+Write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECDataBaseManager+Write.h"; sourceTree = "<group>"; };
+		D3CE8DE11E84F74000E8F2E9 /* ECDataBaseManager+Write.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECDataBaseManager+Write.m"; sourceTree = "<group>"; };
+		D3CE8DE61E84F76B00E8F2E9 /* ECUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECUser.h; sourceTree = "<group>"; };
+		D3CE8DE71E84F76B00E8F2E9 /* ECUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECUser.m; sourceTree = "<group>"; };
+		D3CE8DEA1E84F7A100E8F2E9 /* NSString+ECExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECExtensions.h"; sourceTree = "<group>"; };
+		D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECExtensions.m"; sourceTree = "<group>"; };
+		D3CE8DEE1E84F82A00E8F2E9 /* ECBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseObject.h; sourceTree = "<group>"; };
+		D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseObject.m; sourceTree = "<group>"; };
+		D3DE4B5F1E8B5F4100DF0584 /* NSArray+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Util.h"; sourceTree = "<group>"; };
+		D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Util.m"; sourceTree = "<group>"; };
+		D3DE4B621E8B5F4C00DF0584 /* UIAlertView+BlockKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockKit.h"; sourceTree = "<group>"; };
+		D3DE4B631E8B5F4C00DF0584 /* UIAlertView+BlockKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockKit.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3CE8D531E83989500E8F2E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AB422E1E8E23F100F7FF3C /* libc++.tbd in Frameworks */,
+				D3AB422A1E8E23CF00F7FF3C /* SystemConfiguration.framework in Frameworks */,
+				D3AB42301E8E23F800F7FF3C /* libz.tbd in Frameworks */,
+				D3AB42261E8E23B100F7FF3C /* libsqlite3.tbd in Frameworks */,
+				D3AB422C1E8E23D700F7FF3C /* CoreTelephony.framework in Frameworks */,
+				D3AB42281E8E23C500F7FF3C /* CoreGraphics.framework in Frameworks */,
+				0DEF4B40666C0E084378C4BC /* libPods-ECAcademy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D6F1E83989500E8F2E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D7A1E83989500E8F2E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		514149FE6AADB6E92CBC53AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D84C1673A0FEB640627260D /* Pods-ECAcademy.debug.xcconfig */,
+				993EEE4F115BCC4AE51BC6D5 /* Pods-ECAcademy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC0FACB81E8E2AD400203FF7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FACB91E8E2AD400203FF7 /* Category */,
+				BC0FACBD1E8E2AD400203FF7 /* Controllers */,
+				BC0FACD41E8E2AD400203FF7 /* Models */,
+				BC0FACD91E8E2AD400203FF7 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BC0FACB91E8E2AD400203FF7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FACBA1E8E2AD400203FF7 /* Autority.plist */,
+				BC0FACBB1E8E2AD400203FF7 /* ECBaseNavController+Login.h */,
+				BC0FACBC1E8E2AD400203FF7 /* ECBaseNavController+Login.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		BC0FACBD1E8E2AD400203FF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FACBE1E8E2AD400203FF7 /* ECBindUserMobileViewController.h */,
+				BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */,
+				BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */,
+				BC0FACC11E8E2AD400203FF7 /* ECForgetPasswordViewController.h */,
+				BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */,
+				BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */,
+				BC0FACC41E8E2AD400203FF7 /* ECLoginGuideViewController.h */,
+				BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */,
+				BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */,
+				BC0FACC71E8E2AD400203FF7 /* ECLoginRootController.h */,
+				BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */,
+				BC0FACC91E8E2AD400203FF7 /* ECLoginViewController.h */,
+				BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */,
+				BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */,
+				BC0FACCC1E8E2AD400203FF7 /* ECPhoneLoginController.h */,
+				BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */,
+				BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */,
+				BC0FACCF1E8E2AD400203FF7 /* ECSetPasswordViewController.h */,
+				BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */,
+				BC0FACD11E8E2AD400203FF7 /* ECUserRegisterViewController.h */,
+				BC0FACD21E8E2AD400203FF7 /* ECUserRegisterViewController.m */,
+				BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC0FACD41E8E2AD400203FF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FACD51E8E2AD400203FF7 /* ECUser+Manager.h */,
+				BC0FACD61E8E2AD400203FF7 /* ECUser+Manager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC0FACD91E8E2AD400203FF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCF253FA1E8E366F00703981 /* Net+User */ = {
+			isa = PBXGroup;
+			children = (
+				BCF253FB1E8E369500703981 /* ECNetworkRequestManager+User.h */,
+				BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */,
+			);
+			path = "Net+User";
+			sourceTree = "<group>";
+		};
+		D31C28DB1E851B4B00ADFFA3 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				BCF253FA1E8E366F00703981 /* Net+User */,
+				D39B17D61E8902A20002308D /* ECNetworkRequestManager.h */,
+				D39B17D71E8902A20002308D /* ECNetworkRequestManager.m */,
+				D3625C921E8BAEDF00446292 /* ECNetworkRequestManager+Common.h */,
+				D3625C931E8BAEDF00446292 /* ECNetworkRequestManager+Common.m */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		D325D5C51E89F10A00A27A3A /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5CD1E89F12B00A27A3A /* UIImage+ECExtensions.h */,
+				D325D5CE1E89F12B00A27A3A /* UIImage+ECExtensions.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		D325D5C61E89F11600A27A3A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5C71E89F12400A27A3A /* NSObject+AOP.h */,
+				D325D5C81E89F12400A27A3A /* NSObject+AOP.m */,
+				D325D5C91E89F12400A27A3A /* NSObject+RunTimeUtility.h */,
+				D325D5CA1E89F12400A27A3A /* NSObject+RunTimeUtility.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		D325D5D01E89F1EE00A27A3A /* CommonMethods */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5D11E89F20900A27A3A /* ECCommenMethod.h */,
+				D325D5D21E89F20900A27A3A /* ECCommenMethod.m */,
+			);
+			path = CommonMethods;
+			sourceTree = "<group>";
+		};
+		D325D5D41E89F4EC00A27A3A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5D51E89F5A400A27A3A /* UIView+Extension.h */,
+				D325D5D61E89F5A400A27A3A /* UIView+Extension.m */,
+				D325D5E21E89FC8F00A27A3A /* UIView+CommonMethods.h */,
+				D325D5E31E89FC8F00A27A3A /* UIView+CommonMethods.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		D325D5DE1E89FAC400A27A3A /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5DF1E89FAD800A27A3A /* UIButton+Extension.h */,
+				D325D5E01E89FAD800A27A3A /* UIButton+Extension.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		D325D5E51E8A032300A27A3A /* PlatformManager(分享) */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB42311E8E2A4200F7FF3C /* ECPlatformShareManager.h */,
+				D3AB42321E8E2A4200F7FF3C /* ECPlatformShareManager.m */,
+			);
+			path = "PlatformManager(分享)";
+			sourceTree = "<group>";
+		};
+		D325D5EC1E8A10F200A27A3A /* ToolsView(自定义视图) */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5ED1E8A10FB00A27A3A /* ECMenuView.h */,
+				D325D5EE1E8A10FB00A27A3A /* ECMenuView.m */,
+				D3C666961E8F41AA0025E432 /* ECBaseFilterView.h */,
+				D3C666971E8F41AA0025E432 /* ECBaseFilterView.m */,
+			);
+			path = "ToolsView(自定义视图)";
+			sourceTree = "<group>";
+		};
+		D325D5F01E8A2E5100A27A3A /* Library(第三方) */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB421B1E8CFA7800F7FF3C /* NJKWebViewProgress */,
+			);
+			path = "Library(第三方)";
+			sourceTree = "<group>";
+		};
+		D39B17C91E88A2000002308D /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				D39B17CA1E88A22E0002308D /* CYLTableViewPlaceHolder.h */,
+				D39B17CB1E88A22E0002308D /* CYLTableViewPlaceHolderDelegate.h */,
+				D39B17CC1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.h */,
+				D39B17CD1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		D39B17D41E8902690002308D /* NetConstant */ = {
+			isa = PBXGroup;
+			children = (
+				D39B17D51E8902690002308D /* ECServerRequestFuncCode.h */,
+			);
+			path = NetConstant;
+			sourceTree = "<group>";
+		};
+		D3AB421B1E8CFA7800F7FF3C /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB421C1E8CFA8400F7FF3C /* NJKWebViewProgress.h */,
+				D3AB421D1E8CFA8400F7FF3C /* NJKWebViewProgress.m */,
+				D3AB421E1E8CFA8400F7FF3C /* NJKWebViewProgressView.h */,
+				D3AB421F1E8CFA8400F7FF3C /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
+		D3CE8D4D1E83989500E8F2E9 = {
+			isa = PBXGroup;
+			children = (
+				D3CE8D581E83989500E8F2E9 /* ECAcademy */,
+				D3CE8D751E83989500E8F2E9 /* ECAcademyTests */,
+				D3CE8D801E83989500E8F2E9 /* ECAcademyUITests */,
+				D3CE8D571E83989500E8F2E9 /* Products */,
+				514149FE6AADB6E92CBC53AC /* Pods */,
+				EB61C4EB138E31D39E2A7519 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3CE8D571E83989500E8F2E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8D561E83989500E8F2E9 /* ECAcademy.app */,
+				D3CE8D721E83989500E8F2E9 /* ECAcademyTests.xctest */,
+				D3CE8D7D1E83989500E8F2E9 /* ECAcademyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3CE8D581E83989500E8F2E9 /* ECAcademy */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DB11E83BCD200E8F2E9 /* common.h */,
+				D3CE8D5C1E83989500E8F2E9 /* AppDelegate.h */,
+				D3CE8D5D1E83989500E8F2E9 /* AppDelegate.m */,
+				BC0FACB81E8E2AD400203FF7 /* Login */,
+				D325D5F01E8A2E5100A27A3A /* Library(第三方) */,
+				D3CE8DC51E84F18700E8F2E9 /* Expand(辅助类) */,
+				D3CE8DAC1E83A21D00E8F2E9 /* ECCommon(公共) */,
+				D3CE8DA01E83A1F100E8F2E9 /* ECCourse(课程) */,
+				D3CE8DA81E83A20400E8F2E9 /* ECTrain(培训) */,
+				D3CE8DA41E83A1F900E8F2E9 /* ECMyPage(我的) */,
+				D3CE8D651E83989500E8F2E9 /* Main.storyboard */,
+				D3CE8D681E83989500E8F2E9 /* Assets.xcassets */,
+				D3CE8D6A1E83989500E8F2E9 /* LaunchScreen.storyboard */,
+				D3CE8D6D1E83989500E8F2E9 /* Info.plist */,
+				D3CE8D591E83989500E8F2E9 /* Supporting Files */,
+			);
+			path = ECAcademy;
+			sourceTree = "<group>";
+		};
+		D3CE8D591E83989500E8F2E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8D5A1E83989500E8F2E9 /* main.m */,
+				D3CE8DB01E83BC4000E8F2E9 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3CE8D751E83989500E8F2E9 /* ECAcademyTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8D761E83989500E8F2E9 /* ECAcademyTests.m */,
+				D3CE8D781E83989500E8F2E9 /* Info.plist */,
+			);
+			path = ECAcademyTests;
+			sourceTree = "<group>";
+		};
+		D3CE8D801E83989500E8F2E9 /* ECAcademyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8D811E83989500E8F2E9 /* ECAcademyUITests.m */,
+				D3CE8D831E83989500E8F2E9 /* Info.plist */,
+			);
+			path = ECAcademyUITests;
+			sourceTree = "<group>";
+		};
+		D3CE8D9F1E83A19900E8F2E9 /* Utility(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5EC1E8A10F200A27A3A /* ToolsView(自定义视图) */,
+				D325D5D01E89F1EE00A27A3A /* CommonMethods */,
+			);
+			name = "Utility(工具)";
+			path = "../Utility(工具)";
+			sourceTree = "<group>";
+		};
+		D3CE8DA01E83A1F100E8F2E9 /* ECCourse(课程) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DA21E83A1F100E8F2E9 /* Model */,
+				D3CE8DA31E83A1F100E8F2E9 /* View */,
+				D3CE8DA11E83A1F100E8F2E9 /* Controller */,
+			);
+			path = "ECCourse(课程)";
+			sourceTree = "<group>";
+		};
+		D3CE8DA11E83A1F100E8F2E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DB51E84EE5500E8F2E9 /* ECMainCourseViewController.h */,
+				D3CE8DB61E84EE5500E8F2E9 /* ECMainCourseViewController.m */,
+				D3625C8F1E8B98DE00446292 /* ECCourseListViewController.h */,
+				D3625C901E8B98DE00446292 /* ECCourseListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3CE8DA21E83A1F100E8F2E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3CE8DA31E83A1F100E8F2E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5F11E8A4B1500A27A3A /* ECMainCourseCell.h */,
+				D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */,
+				D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3CE8DA41E83A1F900E8F2E9 /* ECMyPage(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DA61E83A1F900E8F2E9 /* Model */,
+				D3CE8DA71E83A1F900E8F2E9 /* View */,
+				D3CE8DA51E83A1F900E8F2E9 /* Controller */,
+			);
+			path = "ECMyPage(我的)";
+			sourceTree = "<group>";
+		};
+		D3CE8DA51E83A1F900E8F2E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DC11E84EF0500E8F2E9 /* ECMainMyViewController.h */,
+				D3CE8DC21E84EF0500E8F2E9 /* ECMainMyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3CE8DA61E83A1F900E8F2E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3CE8DA71E83A1F900E8F2E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3CE8DA81E83A20400E8F2E9 /* ECTrain(培训) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DAA1E83A20400E8F2E9 /* Model */,
+				D3CE8DAB1E83A20400E8F2E9 /* View */,
+				D3CE8DA91E83A20400E8F2E9 /* Controller */,
+			);
+			path = "ECTrain(培训)";
+			sourceTree = "<group>";
+		};
+		D3CE8DA91E83A20400E8F2E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DBE1E84EEE600E8F2E9 /* ECMainTrainViewController.h */,
+				D3CE8DBF1E84EEE600E8F2E9 /* ECMainTrainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3CE8DAA1E83A20400E8F2E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3CE8DAB1E83A20400E8F2E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3CE8DAC1E83A21D00E8F2E9 /* ECCommon(公共) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DAE1E83A21D00E8F2E9 /* Model */,
+				D3CE8DAF1E83A21D00E8F2E9 /* View */,
+				D3CE8DAD1E83A21D00E8F2E9 /* Controller */,
+			);
+			path = "ECCommon(公共)";
+			sourceTree = "<group>";
+		};
+		D3CE8DAD1E83A21D00E8F2E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DB81E84EE7600E8F2E9 /* ECBaseViewController.h */,
+				D3CE8DB91E84EE7600E8F2E9 /* ECBaseViewController.m */,
+				D3CE8DBB1E84EE9100E8F2E9 /* ECBaseNavController.h */,
+				D3CE8DBC1E84EE9100E8F2E9 /* ECBaseNavController.m */,
+				D325D5E61E8A03E000A27A3A /* ECBaseTabbarViewController.h */,
+				D325D5E71E8A03E000A27A3A /* ECBaseTabbarViewController.m */,
+				D3AB42181E8CF9FA00F7FF3C /* ECBaseWebViewController.h */,
+				D3AB42191E8CF9FA00F7FF3C /* ECBaseWebViewController.m */,
+				BCF254EE1E8E7E4900703981 /* ECScanViewController.m */,
+				BCF254EF1E8E7E4900703981 /* ECScanViewController.h */,
+				BCF254F01E8E7E4900703981 /* ECScanViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3CE8DAE1E83A21D00E8F2E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DED1E84F82300E8F2E9 /* BaseModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3CE8DAF1E83A21D00E8F2E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5E91E8A085B00A27A3A /* ECBaseTableView.h */,
+				D325D5EA1E8A085B00A27A3A /* ECBaseTableView.m */,
+				D3AB42221E8E055700F7FF3C /* ECBottomPopView.h */,
+				D3AB42231E8E055700F7FF3C /* ECBottomPopView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3CE8DC41E84EFA200E8F2E9 /* Other(其他) */ = {
+			isa = PBXGroup;
+			children = (
+				D325D5E51E8A032300A27A3A /* PlatformManager(分享) */,
+			);
+			name = "Other(其他)";
+			path = "../ECCommon(公共)/Other(其他)";
+			sourceTree = "<group>";
+		};
+		D3CE8DC51E84F18700E8F2E9 /* Expand(辅助类) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DC61E84F1C400E8F2E9 /* Category(类别) */,
+				D3CE8DC81E84F1F700E8F2E9 /* DataCache(缓存) */,
+				D3CE8DC71E84F1E000E8F2E9 /* Network(网络) */,
+				D3CE8D9F1E83A19900E8F2E9 /* Utility(工具) */,
+				D3CE8DC41E84EFA200E8F2E9 /* Other(其他) */,
+			);
+			path = "Expand(辅助类)";
+			sourceTree = "<group>";
+		};
+		D3CE8DC61E84F1C400E8F2E9 /* Category(类别) */ = {
+			isa = PBXGroup;
+			children = (
+				D3DE4B5E1E8B5F2400DF0584 /* NSArray */,
+				D3DE4B5D1E8B5EBC00DF0584 /* UIAlertView */,
+				D325D5DE1E89FAC400A27A3A /* UIButton */,
+				D325D5D41E89F4EC00A27A3A /* UIView */,
+				D325D5C61E89F11600A27A3A /* NSObject */,
+				D325D5C51E89F10A00A27A3A /* UIImage */,
+				D39B17C91E88A2000002308D /* UITableView */,
+				D3CE8DE91E84F79300E8F2E9 /* NSString */,
+				D3CE8DCD1E84F47100E8F2E9 /* UIViewController */,
+			);
+			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
+		D3CE8DC71E84F1E000E8F2E9 /* Network(网络) */ = {
+			isa = PBXGroup;
+			children = (
+				D39B17D41E8902690002308D /* NetConstant */,
+				D31C28DB1E851B4B00ADFFA3 /* NetManager */,
+			);
+			path = "Network(网络)";
+			sourceTree = "<group>";
+		};
+		D3CE8DC81E84F1F700E8F2E9 /* DataCache(缓存) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DD31E84F6E000E8F2E9 /* Database(数据库) */,
+				D3CE8DD81E84F71B00E8F2E9 /* DataBaseManager(管理类) */,
+				D3CE8DD91E84F72700E8F2E9 /* DataModel(Model) */,
+			);
+			path = "DataCache(缓存)";
+			sourceTree = "<group>";
+		};
+		D3CE8DCD1E84F47100E8F2E9 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DCE1E84F47100E8F2E9 /* UIViewController+HUD.h */,
+				D3CE8DCF1E84F47100E8F2E9 /* UIViewController+HUD.m */,
+				D325D5F61E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.h */,
+				D325D5F71E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D3CE8DD31E84F6E000E8F2E9 /* Database(数据库) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DDA1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist */,
+				D3CE8DD61E84F6F100E8F2E9 /* cache.sqlite */,
+				D3CE8DD41E84F6EC00E8F2E9 /* common.sqlite */,
+			);
+			path = "Database(数据库)";
+			sourceTree = "<group>";
+		};
+		D3CE8DD81E84F71B00E8F2E9 /* DataBaseManager(管理类) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DDC1E84F74000E8F2E9 /* ECDataBaseManager.h */,
+				D3CE8DDD1E84F74000E8F2E9 /* ECDataBaseManager.m */,
+				D3CE8DDE1E84F74000E8F2E9 /* ECDataBaseManager+Read.h */,
+				D3CE8DDF1E84F74000E8F2E9 /* ECDataBaseManager+Read.m */,
+				D3CE8DE01E84F74000E8F2E9 /* ECDataBaseManager+Write.h */,
+				D3CE8DE11E84F74000E8F2E9 /* ECDataBaseManager+Write.m */,
+			);
+			name = "DataBaseManager(管理类)";
+			path = "Database(数据库)/DataBaseManager(管理类)";
+			sourceTree = "<group>";
+		};
+		D3CE8DD91E84F72700E8F2E9 /* DataModel(Model) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DE51E84F76400E8F2E9 /* Users(用户) */,
+			);
+			path = "DataModel(Model)";
+			sourceTree = "<group>";
+		};
+		D3CE8DE51E84F76400E8F2E9 /* Users(用户) */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DE61E84F76B00E8F2E9 /* ECUser.h */,
+				D3CE8DE71E84F76B00E8F2E9 /* ECUser.m */,
+			);
+			path = "Users(用户)";
+			sourceTree = "<group>";
+		};
+		D3CE8DE91E84F79300E8F2E9 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DEA1E84F7A100E8F2E9 /* NSString+ECExtensions.h */,
+				D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */,
+				D325D5D81E89F7B700A27A3A /* NSString+CalculateSize.h */,
+				D325D5D91E89F7B700A27A3A /* NSString+CalculateSize.m */,
+				D325D5DB1E89F86900A27A3A /* NSString+Date.h */,
+				D325D5DC1E89F86900A27A3A /* NSString+Date.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		D3CE8DED1E84F82300E8F2E9 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE8DEE1E84F82A00E8F2E9 /* ECBaseObject.h */,
+				D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		D3DE4B5D1E8B5EBC00DF0584 /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D3DE4B621E8B5F4C00DF0584 /* UIAlertView+BlockKit.h */,
+				D3DE4B631E8B5F4C00DF0584 /* UIAlertView+BlockKit.m */,
+			);
+			path = UIAlertView;
+			sourceTree = "<group>";
+		};
+		D3DE4B5E1E8B5F2400DF0584 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				D3DE4B5F1E8B5F4100DF0584 /* NSArray+Util.h */,
+				D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		EB61C4EB138E31D39E2A7519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB422F1E8E23F800F7FF3C /* libz.tbd */,
+				D3AB422D1E8E23F100F7FF3C /* libc++.tbd */,
+				D3AB422B1E8E23D700F7FF3C /* CoreTelephony.framework */,
+				D3AB42291E8E23CF00F7FF3C /* SystemConfiguration.framework */,
+				D3AB42271E8E23C500F7FF3C /* CoreGraphics.framework */,
+				D3AB42251E8E23B100F7FF3C /* libsqlite3.tbd */,
+				A1C766C0B3E5C678AA6CC72D /* libPods-ECAcademy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3CE8D551E83989500E8F2E9 /* ECAcademy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3CE8D861E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademy" */;
+			buildPhases = (
+				679C63E666D01484E9E647A6 /* [CP] Check Pods Manifest.lock */,
+				D3CE8D521E83989500E8F2E9 /* Sources */,
+				D3CE8D531E83989500E8F2E9 /* Frameworks */,
+				D3CE8D541E83989500E8F2E9 /* Resources */,
+				251E00B45CA362BF7989D4BA /* [CP] Embed Pods Frameworks */,
+				CB53EAB8B6E8BB69CCE34BBB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECAcademy;
+			productName = ECAcademy;
+			productReference = D3CE8D561E83989500E8F2E9 /* ECAcademy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3CE8D711E83989500E8F2E9 /* ECAcademyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3CE8D891E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademyTests" */;
+			buildPhases = (
+				D3CE8D6E1E83989500E8F2E9 /* Sources */,
+				D3CE8D6F1E83989500E8F2E9 /* Frameworks */,
+				D3CE8D701E83989500E8F2E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3CE8D741E83989500E8F2E9 /* PBXTargetDependency */,
+			);
+			name = ECAcademyTests;
+			productName = ECAcademyTests;
+			productReference = D3CE8D721E83989500E8F2E9 /* ECAcademyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3CE8D7C1E83989500E8F2E9 /* ECAcademyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3CE8D8C1E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademyUITests" */;
+			buildPhases = (
+				D3CE8D791E83989500E8F2E9 /* Sources */,
+				D3CE8D7A1E83989500E8F2E9 /* Frameworks */,
+				D3CE8D7B1E83989500E8F2E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3CE8D7F1E83989500E8F2E9 /* PBXTargetDependency */,
+			);
+			name = ECAcademyUITests;
+			productName = ECAcademyUITests;
+			productReference = D3CE8D7D1E83989500E8F2E9 /* ECAcademyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3CE8D4E1E83989500E8F2E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = dentalink;
+				TargetAttributes = {
+					D3CE8D551E83989500E8F2E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4Z49MWW88D;
+						ProvisioningStyle = Automatic;
+					};
+					D3CE8D711E83989500E8F2E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3CE8D551E83989500E8F2E9;
+					};
+					D3CE8D7C1E83989500E8F2E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3CE8D551E83989500E8F2E9;
+					};
+				};
+			};
+			buildConfigurationList = D3CE8D511E83989500E8F2E9 /* Build configuration list for PBXProject "ECAcademy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3CE8D4D1E83989500E8F2E9;
+			productRefGroup = D3CE8D571E83989500E8F2E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3CE8D551E83989500E8F2E9 /* ECAcademy */,
+				D3CE8D711E83989500E8F2E9 /* ECAcademyTests */,
+				D3CE8D7C1E83989500E8F2E9 /* ECAcademyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3CE8D541E83989500E8F2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0FACE11E8E2AD400203FF7 /* ECLoginGuideViewController.xib in Resources */,
+				D3CE8D6C1E83989500E8F2E9 /* LaunchScreen.storyboard in Resources */,
+				BC0FACDA1E8E2AD400203FF7 /* Autority.plist in Resources */,
+				D3CE8D691E83989500E8F2E9 /* Assets.xcassets in Resources */,
+				BC0FACE61E8E2AD400203FF7 /* ECPhoneLoginController.xib in Resources */,
+				BC0FACDD1E8E2AD400203FF7 /* ECBindUserMobileViewController.xib in Resources */,
+				BC0FACDF1E8E2AD400203FF7 /* ECForgetPasswordViewController.xib in Resources */,
+				BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */,
+				D3CE8DD51E84F6EC00E8F2E9 /* common.sqlite in Resources */,
+				D3CE8DD71E84F6F100E8F2E9 /* cache.sqlite in Resources */,
+				D325D5F51E8A4B1500A27A3A /* ECMainCourseCell.xib in Resources */,
+				BC0FACE91E8E2AD400203FF7 /* ECUserRegisterViewController.xib in Resources */,
+				D3CE8D671E83989500E8F2E9 /* Main.storyboard in Resources */,
+				BC0FACE41E8E2AD400203FF7 /* ECLoginViewController.xib in Resources */,
+				D3CE8DDB1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D701E83989500E8F2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D7B1E83989500E8F2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		251E00B45CA362BF7989D4BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ECAcademy/Pods-ECAcademy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		679C63E666D01484E9E647A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB53EAB8B6E8BB69CCE34BBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ECAcademy/Pods-ECAcademy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3CE8D521E83989500E8F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DE4B641E8B5F4C00DF0584 /* UIAlertView+BlockKit.m in Sources */,
+				D325D5F41E8A4B1500A27A3A /* ECMainCourseCell.m in Sources */,
+				BC0FACE71E8E2AD400203FF7 /* ECSetPasswordViewController.m in Sources */,
+				BC0FACE31E8E2AD400203FF7 /* ECLoginViewController.m in Sources */,
+				D3AB42211E8CFA8400F7FF3C /* NJKWebViewProgressView.m in Sources */,
+				D325D5DD1E89F86900A27A3A /* NSString+Date.m in Sources */,
+				D325D5E11E89FAD800A27A3A /* UIButton+Extension.m in Sources */,
+				D3625C941E8BAEDF00446292 /* ECNetworkRequestManager+Common.m in Sources */,
+				BC0FACEA1E8E2AD400203FF7 /* ECUser+Manager.m in Sources */,
+				D3CE8DC01E84EEE600E8F2E9 /* ECMainTrainViewController.m in Sources */,
+				D3CE8DE41E84F74000E8F2E9 /* ECDataBaseManager+Write.m in Sources */,
+				D3CE8DB71E84EE5500E8F2E9 /* ECMainCourseViewController.m in Sources */,
+				BC0FACE21E8E2AD400203FF7 /* ECLoginRootController.m in Sources */,
+				BCF254F11E8E7E4900703981 /* ECScanViewController.m in Sources */,
+				D325D5DA1E89F7B700A27A3A /* NSString+CalculateSize.m in Sources */,
+				BC0FACDB1E8E2AD400203FF7 /* ECBaseNavController+Login.m in Sources */,
+				D325D5D71E89F5A400A27A3A /* UIView+Extension.m in Sources */,
+				BC0FACDC1E8E2AD400203FF7 /* ECBindUserMobileViewController.m in Sources */,
+				D325D5F81E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m in Sources */,
+				D325D5EF1E8A10FB00A27A3A /* ECMenuView.m in Sources */,
+				D325D5CC1E89F12400A27A3A /* NSObject+RunTimeUtility.m in Sources */,
+				D325D5EB1E8A085B00A27A3A /* ECBaseTableView.m in Sources */,
+				D3625C911E8B98DE00446292 /* ECCourseListViewController.m in Sources */,
+				D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */,
+				D3AB42201E8CFA8400F7FF3C /* NJKWebViewProgress.m in Sources */,
+				D3CE8DE21E84F74000E8F2E9 /* ECDataBaseManager.m in Sources */,
+				D325D5E41E89FC8F00A27A3A /* UIView+CommonMethods.m in Sources */,
+				D3CE8DD01E84F47100E8F2E9 /* UIViewController+HUD.m in Sources */,
+				BC0FACE01E8E2AD400203FF7 /* ECLoginGuideViewController.m in Sources */,
+				BC0FACE81E8E2AD400203FF7 /* ECUserRegisterViewController.m in Sources */,
+				D39B17CE1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
+				BC0FACE51E8E2AD400203FF7 /* ECPhoneLoginController.m in Sources */,
+				BC0FACDE1E8E2AD400203FF7 /* ECForgetPasswordViewController.m in Sources */,
+				D3DE4B611E8B5F4100DF0584 /* NSArray+Util.m in Sources */,
+				D3CE8D5E1E83989500E8F2E9 /* AppDelegate.m in Sources */,
+				D325D5CF1E89F12B00A27A3A /* UIImage+ECExtensions.m in Sources */,
+				D3CE8DBA1E84EE7600E8F2E9 /* ECBaseViewController.m in Sources */,
+				D325D5D31E89F20900A27A3A /* ECCommenMethod.m in Sources */,
+				D3CE8DE31E84F74000E8F2E9 /* ECDataBaseManager+Read.m in Sources */,
+				D3AB421A1E8CF9FA00F7FF3C /* ECBaseWebViewController.m in Sources */,
+				D325D5CB1E89F12400A27A3A /* NSObject+AOP.m in Sources */,
+				D3AB42331E8E2A4200F7FF3C /* ECPlatformShareManager.m in Sources */,
+				D39B17D81E8902A20002308D /* ECNetworkRequestManager.m in Sources */,
+				BCF253FD1E8E369500703981 /* ECNetworkRequestManager+User.m in Sources */,
+				D3CE8DF01E84F82A00E8F2E9 /* ECBaseObject.m in Sources */,
+				D3C666981E8F41AA0025E432 /* ECBaseFilterView.m in Sources */,
+				D3CE8DBD1E84EE9100E8F2E9 /* ECBaseNavController.m in Sources */,
+				D3CE8DC31E84EF0500E8F2E9 /* ECMainMyViewController.m in Sources */,
+				D325D5E81E8A03E000A27A3A /* ECBaseTabbarViewController.m in Sources */,
+				D3AB42241E8E055700F7FF3C /* ECBottomPopView.m in Sources */,
+				D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */,
+				D3CE8D5B1E83989500E8F2E9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D6E1E83989500E8F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3CE8D771E83989500E8F2E9 /* ECAcademyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE8D791E83989500E8F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3CE8D821E83989500E8F2E9 /* ECAcademyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3CE8D741E83989500E8F2E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3CE8D551E83989500E8F2E9 /* ECAcademy */;
+			targetProxy = D3CE8D731E83989500E8F2E9 /* PBXContainerItemProxy */;
+		};
+		D3CE8D7F1E83989500E8F2E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3CE8D551E83989500E8F2E9 /* ECAcademy */;
+			targetProxy = D3CE8D7E1E83989500E8F2E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3CE8D651E83989500E8F2E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3CE8D661E83989500E8F2E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3CE8D6A1E83989500E8F2E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3CE8D6B1E83989500E8F2E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3CE8D841E83989500E8F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
+			};
+			name = Debug;
+		};
+		D3CE8D851E83989500E8F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3CE8D871E83989500E8F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D84C1673A0FEB640627260D /* Pods-ECAcademy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
+				DEVELOPMENT_TEAM = 4Z49MWW88D;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ECAcademy/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/VPImageCropper\"",
+				);
+				INFOPLIST_FILE = ECAcademy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dental360.academy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Debug;
+		};
+		D3CE8D881E83989500E8F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993EEE4F115BCC4AE51BC6D5 /* Pods-ECAcademy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
+				DEVELOPMENT_TEAM = 4Z49MWW88D;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ECAcademy/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/VPImageCropper\"",
+				);
+				INFOPLIST_FILE = ECAcademy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dental360.academy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Release;
+		};
+		D3CE8D8A1E83989500E8F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ECAcademyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dental360.www.ECAcademyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ECAcademy.app/ECAcademy";
+			};
+			name = Debug;
+		};
+		D3CE8D8B1E83989500E8F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ECAcademyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dental360.www.ECAcademyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ECAcademy.app/ECAcademy";
+			};
+			name = Release;
+		};
+		D3CE8D8D1E83989500E8F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ECAcademyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dental360.www.ECAcademyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ECAcademy;
+			};
+			name = Debug;
+		};
+		D3CE8D8E1E83989500E8F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ECAcademyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dental360.www.ECAcademyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ECAcademy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3CE8D511E83989500E8F2E9 /* Build configuration list for PBXProject "ECAcademy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CE8D841E83989500E8F2E9 /* Debug */,
+				D3CE8D851E83989500E8F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3CE8D861E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CE8D871E83989500E8F2E9 /* Debug */,
+				D3CE8D881E83989500E8F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3CE8D891E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CE8D8A1E83989500E8F2E9 /* Debug */,
+				D3CE8D8B1E83989500E8F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3CE8D8C1E83989500E8F2E9 /* Build configuration list for PBXNativeTarget "ECAcademyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CE8D8D1E83989500E8F2E9 /* Debug */,
+				D3CE8D8E1E83989500E8F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3CE8D4E1E83989500E8F2E9 /* Project object */;
+}

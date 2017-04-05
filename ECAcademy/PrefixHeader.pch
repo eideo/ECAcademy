@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  ECAcademy
+//
+//  Created by Sophist on 2017/3/23.
+//  Copyright © 2017年 dentalink. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define kTestServer     1 //切换测试服务器功能  注释这段代码  来实现
+#define ECIsToAppstore  1 // 这个不用注释
+#define kMessageEnable  1 // 这个不用注释
+
+
+#define UMAppKey @"58de02ec717c1920c8000c3d"
+#define kWeChatAppID   @"wx76d05d0fb22b3a39"//这个牙管家的
+#define kWeChatSecret  @"adfe516323e0578bceea2b9340f63fd9"//这个牙管家的
+
+#import "common.h"
+
+#import "AFNetworking.h"
+#import "UIViewController+ECCommonMethods.h"
+#import "UIView+Extension.h"
+#import "ECBottomPopView.h"
+#import "ECBaseTabbarViewController.h"
+#import "ECBaseNavController.h"
+#import "ECBaseViewController.h"
+
+#endif /* PrefixHeader_pch */

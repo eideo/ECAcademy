@@ -1,0 +1,1 @@
+../../../HWPhotoPicker/HWPhotoPicker/HWPhotoPicker/HWPhotoPicker/DataModel/PhotoObj.h
