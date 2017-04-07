@@ -15,8 +15,6 @@
 
 //Tools
 
-
-
 @interface ECMainMyViewController ()<UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *headerImgView;
@@ -41,6 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

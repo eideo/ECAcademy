@@ -36,4 +36,6 @@
 #import "ECUser+Manager.h"
 #import "NSObject+AOP.h"
 #import "MJRefresh.h"
+#import "UIAlertView+BlockKit.h"
+
 #endif /* PrefixHeader_pch */

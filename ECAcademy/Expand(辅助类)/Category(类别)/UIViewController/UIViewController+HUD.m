@@ -22,11 +22,6 @@
     NSString *showStr = [string isValid]?string:@"加载中...";
     hud.label.text = showStr;
     // hud.label.font = [UIFont italicSystemFontOfSize:16.f];
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [hud hideAnimated:YES];
-        });
-    });
 }
 
 - (void)showSimpleInfo:(NSString *)string

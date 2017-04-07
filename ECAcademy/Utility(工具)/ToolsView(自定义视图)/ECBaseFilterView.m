@@ -88,12 +88,12 @@
                 
                 btn.tag = selfViewTagBase+i;
                 
-                if (i != self.dataSource.count - 1)
-                {
-                    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(viewWidth/self.dataSource.count - 0.5, 10, 0.5, 22)];
-                    line.backgroundColor = kECBlackColor5;
-                    [btn addSubview:line];
-                }
+//                if (i != self.dataSource.count - 1)
+//                {
+//                    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(viewWidth/self.dataSource.count - 0.5, 10, 0.5, 22)];
+//                    line.backgroundColor = kECBlackColor5;
+//                    [btn addSubview:line];
+//                }
                 [self.modelViewArray addObject:btn];
                 [self.pageView addSubview:btn];
             }
@@ -356,11 +356,10 @@
                 cell.m_title.left  = (tableView.width - cell.m_title.width)/2.f;
             }
             
-            
-            
             if (item.icon)
             {
                 cell.m_icon.image = item.icon;
+                cell.m_title.left += (cell.m_icon.width - 5);
                 cell.m_icon.right = CGRectGetMinX(cell.m_title.frame) - 5;
                 cell.m_icon.hidden = NO;
             }
@@ -589,10 +588,10 @@
         size.width = self.width - self.m_imageView.width-3;
     }
     CGFloat imageWith = 0;
-    if (self.m_imageView.hidden == NO)
-    {
-        imageWith = self.m_imageView.width + 3;
-    }
+//    if (self.m_imageView.hidden == NO)
+//    {
+//        imageWith = self.m_imageView.width + 3;
+//    }
     CGFloat x = (self.width - size.width - imageWith)/2.0;
     x = ceil(x);
     CGRect rect = self.m_titleLab.frame;

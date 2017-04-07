@@ -14,6 +14,9 @@
 @interface ECMainTrainViewController ()
 @property(nonatomic,strong)ECBaseFilterView *filterView;
 @property(nonatomic,strong)ECBaseTableView *tableView;
+@property(nonatomic,strong)UIView *navView;
+@property(nonatomic,strong)UILabel *titleLab;
+@property(nonatomic,strong)UIView *rightBtn;
 @end
 
 @implementation ECMainTrainViewController
@@ -24,9 +27,42 @@
     self.title = @"培训";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.filterView];
-    [self initNavView];
+    [self.view addSubview:self.navView];
     
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+-(UIView *)navView
+{
+    if (!_navView) {
+        _navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0.f, kECScreenWidth, kNavHeight)];
+        
+        UIButton *rightBtn = [UIButton imageTitleButtonWithFrame:CGRectMake(kECScreenWidth - 50, 22, 40, 40) image:[UIImage imageNamed:@"icon_associate_no"] showImageSize:CGSizeMake(14, 18) title:nil titleFont:nil imagePosition:UIImageOrientationRight buttonType:UIButtonTypeCustom];
+        [rightBtn addTarget:self action:@selector(navClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [_navView addSubview:rightBtn];
+        
+        
+        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((kECScreenWidth - 100)/2.f, 20, 100, 44.0f)];
+        titleLab.font = [UIFont boldSystemFontOfSize:15.0f];
+        titleLab.textColor = kECBlackColor2;
+        titleLab.textAlignment = NSTextAlignmentCenter;
+        titleLab.text = @"全部培训";
+        _titleLab = titleLab;
+        [_navView addSubview:titleLab];
+        
+    }
+    return _navView;
 }
 
 -(ECBaseFilterView *)filterView
@@ -80,15 +116,17 @@
             return cell;
         };
         
+        ECBlockSet
         tableConfig.cellClick = ^(UITableView *tableView, id cellModel, UITableViewCell *cell, NSIndexPath *indexPath) {
-            
+            ECBlockGet(this)
+            [this showSimpleInfo:@"Ceshi"];
         };
 //        tableConfig.sectionFooterConfig = ^UIView *(UITableView *tableView, id cellModel) {
 //            UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kECScreenWidth, 10.f)];
 //            footerView.backgroundColor = kECBackgroundColor;
 //            return footerView;
 //        };
-        ECBlockSet
+        
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
            ECBlockGet(this)
             [this.tableView.mj_header performSelector:@selector(endRefreshing) withObject:nil afterDelay:2.f];
@@ -105,13 +143,6 @@
     return _tableView;
 }
 
--(void)initNavView
-{
-    UIButton *rightBtn = [UIButton imageTitleButtonWithFrame:CGRectMake(0, 0, 40, 40) image:[UIImage imageNamed:@"icon_associate_no"] showImageSize:CGSizeMake(14, 18) title:nil titleFont:nil imagePosition:UIImageOrientationRight buttonType:UIButtonTypeCustom];
-    [rightBtn addTarget:self action:@selector(navClick:) forControlEvents:UIControlEventTouchUpInside];
-//    rightBtn.tintColor = kECBlackColor3;
-    [self customNavRightViews:@[rightBtn]];
-}
 
 #pragma mark - Action Methods
 -(void)navClick:(UIButton *)sender

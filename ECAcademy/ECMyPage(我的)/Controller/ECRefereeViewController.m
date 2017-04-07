@@ -9,7 +9,7 @@
 #import "ECRefereeViewController.h"
 
 @interface ECRefereeViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *showNoticeBtn;
+@property (weak, nonatomic) IBOutlet UILabel *showNoticeLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textInputField;
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 

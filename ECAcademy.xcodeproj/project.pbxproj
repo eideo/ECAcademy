@@ -24,6 +24,8 @@
 		BCB300681E95E73600A4BCAE /* ECLoginKQ88ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB300661E95E73600A4BCAE /* ECLoginKQ88ViewController.xib */; };
 		BCB3006D1E963EC400A4BCAE /* ECSettingTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB3006C1E963EC400A4BCAE /* ECSettingTableController.m */; };
 		BCBAEA441E97277900ED23DB /* ECRefereeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBAEA431E97277900ED23DB /* ECRefereeViewController.m */; };
+		BCBAEA471E9744B600ED23DB /* FileService.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBAEA461E9744B600ED23DB /* FileService.m */; };
+		BCBAEA4A1E97457000ED23DB /* HWSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBAEA491E97457000ED23DB /* HWSandbox.m */; };
 		BCF253FD1E8E369500703981 /* ECNetworkRequestManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */; };
 		BCF254F11E8E7E4900703981 /* ECScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF254EE1E8E7E4900703981 /* ECScanViewController.m */; };
 		BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF254F01E8E7E4900703981 /* ECScanViewController.xib */; };
@@ -39,11 +41,16 @@
 		D325D5E81E8A03E000A27A3A /* ECBaseTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5E71E8A03E000A27A3A /* ECBaseTabbarViewController.m */; };
 		D325D5EB1E8A085B00A27A3A /* ECBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5EA1E8A085B00A27A3A /* ECBaseTableView.m */; };
 		D325D5EF1E8A10FB00A27A3A /* ECMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5EE1E8A10FB00A27A3A /* ECMenuView.m */; };
-		D325D5F41E8A4B1500A27A3A /* ECMainCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */; };
-		D325D5F51E8A4B1500A27A3A /* ECMainCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */; };
 		D325D5F81E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D325D5F71E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m */; };
 		D3625C911E8B98DE00446292 /* ECCourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3625C901E8B98DE00446292 /* ECCourseListViewController.m */; };
 		D3625C941E8BAEDF00446292 /* ECNetworkRequestManager+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D3625C931E8BAEDF00446292 /* ECNetworkRequestManager+Common.m */; };
+		D3766F891E973C9900553C5A /* ECCourseCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3766F7F1E973C9900553C5A /* ECCourseCollectCell.m */; };
+		D3766F8A1E973C9900553C5A /* ECCourseCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3766F801E973C9900553C5A /* ECCourseCollectCell.xib */; };
+		D3766F8B1E973C9900553C5A /* ECCourseCollectHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3766F821E973C9900553C5A /* ECCourseCollectHeadView.m */; };
+		D3766F8C1E973C9900553C5A /* ECCourseHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3766F841E973C9900553C5A /* ECCourseHeadView.m */; };
+		D3766F8D1E973C9900553C5A /* ECCourseHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3766F851E973C9900553C5A /* ECCourseHeadView.xib */; };
+		D3766F8E1E973C9900553C5A /* ECMainCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3766F871E973C9900553C5A /* ECMainCourseCell.m */; };
+		D3766F8F1E973C9900553C5A /* ECMainCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3766F881E973C9900553C5A /* ECMainCourseCell.xib */; };
 		D39B17CE1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B17CD1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m */; };
 		D39B17D81E8902A20002308D /* ECNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B17D71E8902A20002308D /* ECNetworkRequestManager.m */; };
 		D3AB421A1E8CF9FA00F7FF3C /* ECBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AB42191E8CF9FA00F7FF3C /* ECBaseWebViewController.m */; };
@@ -80,11 +87,6 @@
 		D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DE71E84F76B00E8F2E9 /* ECUser.m */; };
 		D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */; };
 		D3CE8DF01E84F82A00E8F2E9 /* ECBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */; };
-		D3D26D961E9629A300743231 /* ECCourseCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D941E9629A300743231 /* ECCourseCollectCell.m */; };
-		D3D26D971E9629A300743231 /* ECCourseCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */; };
-		D3D26D9B1E96322900743231 /* ECCourseHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D991E96322900743231 /* ECCourseHeadView.m */; };
-		D3D26D9C1E96322900743231 /* ECCourseHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */; };
-		D3D26D9F1E96473600743231 /* ECCourseCollectHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */; };
 		D3D4BD901E9490A900CEE249 /* ECTrainListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4BD8E1E9490A900CEE249 /* ECTrainListCell.m */; };
 		D3D4BD911E9490A900CEE249 /* ECTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4BD8F1E9490A900CEE249 /* ECTrainListCell.xib */; };
 		D3DE4B611E8B5F4100DF0584 /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */; };
@@ -138,6 +140,10 @@
 		BCB3006C1E963EC400A4BCAE /* ECSettingTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSettingTableController.m; sourceTree = "<group>"; };
 		BCBAEA421E97277900ED23DB /* ECRefereeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRefereeViewController.h; sourceTree = "<group>"; };
 		BCBAEA431E97277900ED23DB /* ECRefereeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRefereeViewController.m; sourceTree = "<group>"; };
+		BCBAEA451E9744B600ED23DB /* FileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileService.h; sourceTree = "<group>"; };
+		BCBAEA461E9744B600ED23DB /* FileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileService.m; sourceTree = "<group>"; };
+		BCBAEA481E97457000ED23DB /* HWSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSandbox.h; sourceTree = "<group>"; };
+		BCBAEA491E97457000ED23DB /* HWSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSandbox.m; sourceTree = "<group>"; };
 		BCF253FB1E8E369500703981 /* ECNetworkRequestManager+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECNetworkRequestManager+User.h"; sourceTree = "<group>"; };
 		BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECNetworkRequestManager+User.m"; sourceTree = "<group>"; };
 		BCF254EE1E8E7E4900703981 /* ECScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECScanViewController.m; sourceTree = "<group>"; };
@@ -167,15 +173,23 @@
 		D325D5EA1E8A085B00A27A3A /* ECBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseTableView.m; sourceTree = "<group>"; };
 		D325D5ED1E8A10FB00A27A3A /* ECMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMenuView.h; sourceTree = "<group>"; };
 		D325D5EE1E8A10FB00A27A3A /* ECMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMenuView.m; sourceTree = "<group>"; };
-		D325D5F11E8A4B1500A27A3A /* ECMainCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainCourseCell.h; sourceTree = "<group>"; };
-		D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainCourseCell.m; sourceTree = "<group>"; };
-		D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECMainCourseCell.xib; sourceTree = "<group>"; };
 		D325D5F61E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECCommonMethods.h"; sourceTree = "<group>"; };
 		D325D5F71E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECCommonMethods.m"; sourceTree = "<group>"; };
 		D3625C8F1E8B98DE00446292 /* ECCourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseListViewController.h; sourceTree = "<group>"; };
 		D3625C901E8B98DE00446292 /* ECCourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseListViewController.m; sourceTree = "<group>"; };
 		D3625C921E8BAEDF00446292 /* ECNetworkRequestManager+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECNetworkRequestManager+Common.h"; sourceTree = "<group>"; };
 		D3625C931E8BAEDF00446292 /* ECNetworkRequestManager+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECNetworkRequestManager+Common.m"; sourceTree = "<group>"; };
+		D3766F7E1E973C9900553C5A /* ECCourseCollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectCell.h; sourceTree = "<group>"; };
+		D3766F7F1E973C9900553C5A /* ECCourseCollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectCell.m; sourceTree = "<group>"; };
+		D3766F801E973C9900553C5A /* ECCourseCollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseCollectCell.xib; sourceTree = "<group>"; };
+		D3766F811E973C9900553C5A /* ECCourseCollectHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectHeadView.h; sourceTree = "<group>"; };
+		D3766F821E973C9900553C5A /* ECCourseCollectHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectHeadView.m; sourceTree = "<group>"; };
+		D3766F831E973C9900553C5A /* ECCourseHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseHeadView.h; sourceTree = "<group>"; };
+		D3766F841E973C9900553C5A /* ECCourseHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseHeadView.m; sourceTree = "<group>"; };
+		D3766F851E973C9900553C5A /* ECCourseHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseHeadView.xib; sourceTree = "<group>"; };
+		D3766F861E973C9900553C5A /* ECMainCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainCourseCell.h; sourceTree = "<group>"; };
+		D3766F871E973C9900553C5A /* ECMainCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainCourseCell.m; sourceTree = "<group>"; };
+		D3766F881E973C9900553C5A /* ECMainCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECMainCourseCell.xib; sourceTree = "<group>"; };
 		D39B17CA1E88A22E0002308D /* CYLTableViewPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTableViewPlaceHolder.h; sourceTree = "<group>"; };
 		D39B17CB1E88A22E0002308D /* CYLTableViewPlaceHolderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTableViewPlaceHolderDelegate.h; sourceTree = "<group>"; };
 		D39B17CC1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CYLTableViewPlaceHolder.h"; sourceTree = "<group>"; };
@@ -244,14 +258,6 @@
 		D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECExtensions.m"; sourceTree = "<group>"; };
 		D3CE8DEE1E84F82A00E8F2E9 /* ECBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseObject.h; sourceTree = "<group>"; };
 		D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseObject.m; sourceTree = "<group>"; };
-		D3D26D931E9629A300743231 /* ECCourseCollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectCell.h; sourceTree = "<group>"; };
-		D3D26D941E9629A300743231 /* ECCourseCollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectCell.m; sourceTree = "<group>"; };
-		D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseCollectCell.xib; sourceTree = "<group>"; };
-		D3D26D981E96322900743231 /* ECCourseHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseHeadView.h; sourceTree = "<group>"; };
-		D3D26D991E96322900743231 /* ECCourseHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseHeadView.m; sourceTree = "<group>"; };
-		D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseHeadView.xib; sourceTree = "<group>"; };
-		D3D26D9D1E96473600743231 /* ECCourseCollectHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectHeadView.h; sourceTree = "<group>"; };
-		D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectHeadView.m; sourceTree = "<group>"; };
 		D3D4BD8D1E9490A900CEE249 /* ECTrainListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECTrainListCell.h; sourceTree = "<group>"; };
 		D3D4BD8E1E9490A900CEE249 /* ECTrainListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECTrainListCell.m; sourceTree = "<group>"; };
 		D3D4BD8F1E9490A900CEE249 /* ECTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECTrainListCell.xib; sourceTree = "<group>"; };
@@ -461,6 +467,24 @@
 			path = "Library(第三方)";
 			sourceTree = "<group>";
 		};
+		D3766F7D1E973C9900553C5A /* MainCourseView */ = {
+			isa = PBXGroup;
+			children = (
+				D3766F7E1E973C9900553C5A /* ECCourseCollectCell.h */,
+				D3766F7F1E973C9900553C5A /* ECCourseCollectCell.m */,
+				D3766F801E973C9900553C5A /* ECCourseCollectCell.xib */,
+				D3766F831E973C9900553C5A /* ECCourseHeadView.h */,
+				D3766F841E973C9900553C5A /* ECCourseHeadView.m */,
+				D3766F851E973C9900553C5A /* ECCourseHeadView.xib */,
+				D3766F861E973C9900553C5A /* ECMainCourseCell.h */,
+				D3766F871E973C9900553C5A /* ECMainCourseCell.m */,
+				D3766F881E973C9900553C5A /* ECMainCourseCell.xib */,
+				D3766F811E973C9900553C5A /* ECCourseCollectHeadView.h */,
+				D3766F821E973C9900553C5A /* ECCourseCollectHeadView.m */,
+			);
+			path = MainCourseView;
+			sourceTree = "<group>";
+		};
 		D39B17C91E88A2000002308D /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,17 +627,7 @@
 		D3CE8DA31E83A1F100E8F2E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D325D5F11E8A4B1500A27A3A /* ECMainCourseCell.h */,
-				D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */,
-				D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */,
-				D3D26D931E9629A300743231 /* ECCourseCollectCell.h */,
-				D3D26D941E9629A300743231 /* ECCourseCollectCell.m */,
-				D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */,
-				D3D26D981E96322900743231 /* ECCourseHeadView.h */,
-				D3D26D991E96322900743231 /* ECCourseHeadView.m */,
-				D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */,
-				D3D26D9D1E96473600743231 /* ECCourseCollectHeadView.h */,
-				D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */,
+				D3766F7D1E973C9900553C5A /* MainCourseView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -712,8 +726,8 @@
 				D325D5E71E8A03E000A27A3A /* ECBaseTabbarViewController.m */,
 				D3AB42181E8CF9FA00F7FF3C /* ECBaseWebViewController.h */,
 				D3AB42191E8CF9FA00F7FF3C /* ECBaseWebViewController.m */,
-				BCF254EE1E8E7E4900703981 /* ECScanViewController.m */,
 				BCF254EF1E8E7E4900703981 /* ECScanViewController.h */,
+				BCF254EE1E8E7E4900703981 /* ECScanViewController.m */,
 				BCF254F01E8E7E4900703981 /* ECScanViewController.xib */,
 			);
 			path = Controller;
@@ -820,6 +834,10 @@
 			children = (
 				D3CE8DDC1E84F74000E8F2E9 /* ECDataBaseManager.h */,
 				D3CE8DDD1E84F74000E8F2E9 /* ECDataBaseManager.m */,
+				BCBAEA451E9744B600ED23DB /* FileService.h */,
+				BCBAEA461E9744B600ED23DB /* FileService.m */,
+				BCBAEA481E97457000ED23DB /* HWSandbox.h */,
+				BCBAEA491E97457000ED23DB /* HWSandbox.m */,
 				D3CE8DDE1E84F74000E8F2E9 /* ECDataBaseManager+Read.h */,
 				D3CE8DDF1E84F74000E8F2E9 /* ECDataBaseManager+Read.m */,
 				D3CE8DE01E84F74000E8F2E9 /* ECDataBaseManager+Write.h */,
@@ -1011,22 +1029,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0FACE11E8E2AD400203FF7 /* ECLoginGuideViewController.xib in Resources */,
+				D3766F8A1E973C9900553C5A /* ECCourseCollectCell.xib in Resources */,
 				D3CE8D6C1E83989500E8F2E9 /* LaunchScreen.storyboard in Resources */,
 				BC0FACDA1E8E2AD400203FF7 /* Autority.plist in Resources */,
 				D3CE8D691E83989500E8F2E9 /* Assets.xcassets in Resources */,
 				BC0FACE61E8E2AD400203FF7 /* ECLoginBindPhoneController.xib in Resources */,
 				D3D4BD911E9490A900CEE249 /* ECTrainListCell.xib in Resources */,
 				BC0FACDF1E8E2AD400203FF7 /* ECForgetPasswordViewController.xib in Resources */,
-				D3D26D971E9629A300743231 /* ECCourseCollectCell.xib in Resources */,
 				BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */,
 				D3CE8DD51E84F6EC00E8F2E9 /* common.sqlite in Resources */,
 				BCB300681E95E73600A4BCAE /* ECLoginKQ88ViewController.xib in Resources */,
+				D3766F8D1E973C9900553C5A /* ECCourseHeadView.xib in Resources */,
 				D3CE8DD71E84F6F100E8F2E9 /* cache.sqlite in Resources */,
-				D325D5F51E8A4B1500A27A3A /* ECMainCourseCell.xib in Resources */,
 				BC0FACE91E8E2AD400203FF7 /* ECUserRegisterViewController.xib in Resources */,
 				D3CE8D671E83989500E8F2E9 /* Main.storyboard in Resources */,
-				D3D26D9C1E96322900743231 /* ECCourseHeadView.xib in Resources */,
 				D3CE8DDB1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist in Resources */,
+				D3766F8F1E973C9900553C5A /* ECMainCourseCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,10 +1118,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DE4B641E8B5F4C00DF0584 /* UIAlertView+BlockKit.m in Sources */,
+				BCBAEA471E9744B600ED23DB /* FileService.m in Sources */,
 				D325D5F41E8A4B1500A27A3A /* ECMainCourseCell.m in Sources */,
 				BC0FACE71E8E2AD400203FF7 /* ECSetPasswordViewController.m in Sources */,
 				D3AB42211E8CFA8400F7FF3C /* NJKWebViewProgressView.m in Sources */,
 				D325D5DD1E89F86900A27A3A /* NSString+Date.m in Sources */,
+				D3766F8B1E973C9900553C5A /* ECCourseCollectHeadView.m in Sources */,
 				D325D5E11E89FAD800A27A3A /* UIButton+Extension.m in Sources */,
 				D3625C941E8BAEDF00446292 /* ECNetworkRequestManager+Common.m in Sources */,
 				BC0FACEA1E8E2AD400203FF7 /* ECUser+Manager.m in Sources */,
@@ -1119,9 +1139,11 @@
 				D325D5F81E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m in Sources */,
 				D325D5EF1E8A10FB00A27A3A /* ECMenuView.m in Sources */,
 				D325D5CC1E89F12400A27A3A /* NSObject+RunTimeUtility.m in Sources */,
+				D3766F8E1E973C9900553C5A /* ECMainCourseCell.m in Sources */,
 				D325D5EB1E8A085B00A27A3A /* ECBaseTableView.m in Sources */,
-				D3D26D961E9629A300743231 /* ECCourseCollectCell.m in Sources */,
+				D3766F891E973C9900553C5A /* ECCourseCollectCell.m in Sources */,
 				D3625C911E8B98DE00446292 /* ECCourseListViewController.m in Sources */,
+				BCBAEA4A1E97457000ED23DB /* HWSandbox.m in Sources */,
 				D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */,
 				D3AB42201E8CFA8400F7FF3C /* NJKWebViewProgress.m in Sources */,
 				D3CE8DE21E84F74000E8F2E9 /* ECDataBaseManager.m in Sources */,
@@ -1137,7 +1159,7 @@
 				D325D5CF1E89F12B00A27A3A /* UIImage+ECExtensions.m in Sources */,
 				D3CE8DBA1E84EE7600E8F2E9 /* ECBaseViewController.m in Sources */,
 				D3D4BD901E9490A900CEE249 /* ECTrainListCell.m in Sources */,
-				D3D26D9F1E96473600743231 /* ECCourseCollectHeadView.m in Sources */,
+				D3766F8C1E973C9900553C5A /* ECCourseHeadView.m in Sources */,
 				D325D5D31E89F20900A27A3A /* ECCommenMethod.m in Sources */,
 				D3CE8DE31E84F74000E8F2E9 /* ECDataBaseManager+Read.m in Sources */,
 				D3AB421A1E8CF9FA00F7FF3C /* ECBaseWebViewController.m in Sources */,
@@ -1153,7 +1175,6 @@
 				D3AB42241E8E055700F7FF3C /* ECBottomPopView.m in Sources */,
 				D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */,
 				BCB300671E95E73600A4BCAE /* ECLoginKQ88ViewController.m in Sources */,
-				D3D26D9B1E96322900743231 /* ECCourseHeadView.m in Sources */,
 				D3CE8D5B1E83989500E8F2E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

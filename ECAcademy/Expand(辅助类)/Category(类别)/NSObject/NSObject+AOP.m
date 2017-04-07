@@ -465,23 +465,38 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
 
 
 
-# pragma mark - UILabel Font Adapter
+# pragma mark - UIButton Font Adapter
 //不同设备的屏幕比例(当然倍数可以自己控制)
 #define Font_Adapter_SizeScale (([UIScreen mainScreen].bounds.size.height > 568) ? [UIScreen mainScreen].bounds.size.height/568 : 1)
 
 @implementation UIButton (myFont)
 
 + (void)load{
-    Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
-    Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
-    method_exchangeImplementations(imp, myImp);
+    UIButton * obj = [[UIButton alloc] init];
+    [obj swizzleInstanceMethod:@selector(initWithCoder:) withMethod:@selector(swizzleInitWithCoder:)];
+    [obj swizzleInstanceMethod:@selector(willMoveToSuperview:) withMethod:@selector(swizzleWillMoveToSuperview:)];
 }
-
-- (id)myInitWithCoder:(NSCoder*)aDecode{
-    [self myInitWithCoder:aDecode];
+//适用于所有, 只要把titleLabel的tag设置为333
+- (void)swizzleWillMoveToSuperview:(UIView *)newSuperview
+{
+    [self swizzleWillMoveToSuperview:newSuperview];
+    
     if (self) {
         //部分不改变字体的 把tag值设置成333才回去适配
         if(self.titleLabel.tag == 333){
+            CGFloat fontSize = self.titleLabel.font.pointSize;
+            self.titleLabel.font = [UIFont systemFontOfSize:fontSize*Font_Adapter_SizeScale];
+        }
+    }
+}
+
+//适用于Xib, xib中把button的tag设置为333
+- (id)swizzleInitWithCoder:(NSCoder *)aDecoder
+{
+    [self swizzleInitWithCoder:aDecoder];
+    if (self) {
+        //部分不改变字体的 把tag值设置成333才回去适配
+        if(self.tag == 333){
             CGFloat fontSize = self.titleLabel.font.pointSize;
             self.titleLabel.font = [UIFont systemFontOfSize:fontSize*Font_Adapter_SizeScale];
         }
@@ -493,17 +508,33 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
 @end
 
 
-# pragma mark - UIButton Font Adapter
+
+# pragma mark - UILabel Font Adapter
 @implementation UILabel (myFont)
 
 + (void)load{
-    Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
-    Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
-    method_exchangeImplementations(imp, myImp);
+    UILabel * obj = [[UILabel alloc] init];
+    [obj swizzleInstanceMethod:@selector(initWithCoder:) withMethod:@selector(swizzleInitWithCoder:)];
+    [obj swizzleInstanceMethod:@selector(willMoveToSuperview:) withMethod:@selector(swizzleWillMoveToSuperview:)];
 }
 
-- (id)myInitWithCoder:(NSCoder*)aDecode{
-    [self myInitWithCoder:aDecode];
+//适用于所有, 只要把tag设置为333
+- (void)swizzleWillMoveToSuperview:(UIView *)newSuperview
+{
+    [self swizzleWillMoveToSuperview:newSuperview];
+    
+    if (self) {
+        //部分不改变字体的 把tag值设置成333才回去适配
+        if(self.tag == 333){
+            CGFloat fontSize = self.font.pointSize;
+            self.font = [UIFont systemFontOfSize:fontSize*Font_Adapter_SizeScale];
+        }
+    }
+}
+
+- (id)myInitWithCoder:(NSCoder *)aDecoder
+{
+    [self myInitWithCoder:aDecoder];
     if (self) {
         //部分不改变字体的 把tag值设置成333才回去适配
         if(self.tag == 333){
@@ -513,13 +544,13 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
     }
     return self;
 }
-
 @end
 
-
+# pragma mark - UIViewController NavBar
 
 @implementation UIViewController (navBar)
-+ (void)load{
++ (void)load
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         /* 类方法 */
@@ -530,8 +561,8 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
     });
 }
 
-
--(void)swizzleViewDidLoad{
+-(void)swizzleViewDidLoad
+{
     [self initNavBarProperty];
     [self swizzleViewDidLoad];
 }
@@ -541,6 +572,7 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
     self.hidesBottomBarWhenPushed = YES;
     [self swizzleInit];
 }
+
 -(void)swizzleViewDidAppear:(BOOL)animated
 {
     [self swizzleViewDidAppear:animated];
