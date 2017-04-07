@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,16 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_no_data_hint_new" translatesAutoresizingMaskIntoConstraints="NO" id="oHp-gc-Hyr">
-                                <rect key="frame" x="67" y="203" width="240" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_addd" translatesAutoresizingMaskIntoConstraints="NO" id="oHp-gc-Hyr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="oHp-gc-Hyr" secondAttribute="bottom" constant="164" id="ANF-Ue-MRW"/>
-                            <constraint firstItem="oHp-gc-Hyr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="51" id="H7F-Ny-JFf"/>
-                            <constraint firstItem="oHp-gc-Hyr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="183" id="hP8-r1-QbE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oHp-gc-Hyr" secondAttribute="trailing" constant="52" id="kCn-MP-V2y"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="oHp-gc-Hyr" secondAttribute="bottom" id="79q-xx-thS"/>
+                            <constraint firstItem="oHp-gc-Hyr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dAu-rQ-EJy"/>
+                            <constraint firstAttribute="trailing" secondItem="oHp-gc-Hyr" secondAttribute="trailing" id="gzZ-if-Gyz"/>
+                            <constraint firstItem="oHp-gc-Hyr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jCX-F5-eJx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -41,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_no_data_hint_new" width="440" height="516"/>
+        <image name="img_addd" width="640" height="960"/>
     </resources>
 </document>

@@ -6,23 +6,55 @@
 //  Copyright (c) 2015年 Sophist. All rights reserved.
 //
 
-#import "ECLoginGuideViewController.h"
-#import "ECLoginViewController.h"
+//Models
 #import "ECUser.h"
+
+//Views
+#import "ECBottomPopView.h"
+
+//Controllers
+#import "ECLoginGuideViewController.h"
+#import "ECUserRegisterViewController.h"
+#import "ECSetPasswordViewController.h"
+#import "ECLoginBindPhoneController.h"
+#import "ECLoginKQ88ViewController.h"
+#import "ECForgetPasswordViewController.h"
+
+//Tools
 #import "ECNetworkRequestManager+User.h"
 #import "AppDelegate.h"
-#import "ECUserRegisterViewController.h"
-#import "ECBottomPopView.h"
-#import "ECBindUserMobileViewController.h"
-#import "ECSetPasswordViewController.h"
-#import "ECPhoneLoginController.h"
 #import "UIButton+Extension.h"
 #import <MJRefresh.h>
+#import "NSObject+AOP.h"
 
-@interface ECLoginGuideViewController ()<UIScrollViewDelegate>
+@interface ECLoginGuideViewController ()
 
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓IBOutlet↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+@property (strong, nonatomic) IBOutlet UILabel * weChatBtnLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *weChatBtnImgView;
+@property (weak, nonatomic) IBOutlet UIButton *weChatBtn;
 
-@property (strong, nonatomic) IBOutlet UIButton *weichatBtn;
+//
+@property (weak, nonatomic) IBOutlet UIImageView *kq88BtnImgView;
+@property (weak, nonatomic) IBOutlet UILabel *kq88BtnLabel;
+@property (weak, nonatomic) IBOutlet UIButton *kq88Btn;
+//
+@property (weak, nonatomic) IBOutlet UIView *line_3;
+@property (weak, nonatomic) IBOutlet UIView *line_2;
+@property (weak, nonatomic) IBOutlet UIView *line_1;
+//
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+//
+@property (weak, nonatomic) IBOutlet UIButton *forgotPswBtn;
+//
+@property (weak, nonatomic) IBOutlet UITextField *pswTextF;
+@property (weak, nonatomic) IBOutlet UIImageView *pswIconView;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextF;
+@property (weak, nonatomic) IBOutlet UIImageView *phoneIconView;
+//
+@property (weak, nonatomic) IBOutlet UIImageView *logoImgView;
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑IBOutlet↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
 @property (nonatomic, strong)ECUser * m_user;
 @property (nonatomic, strong)UITextField *m_serverAddressField;
 
@@ -35,55 +67,12 @@
     [super viewDidLoad];
     
     self.tabBarController.tabBar.hidden = YES;
-    
-    self.edgesForExtendedLayout = UIRectEdgeAll;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self _loadScrollView];
-    [self _loadSubViews];
     
-    CGFloat btnWidtn = 39;
-    CGFloat height_Delta = btnWidtn * (kECScreenScale - 1);
-    
-//    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(15, kECScreenHeight - 105, (kECScreenWidth-40)/2, btnWidtn)];
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(10 * kECScreenScale, kECScreenHeight - 105 - height_Delta, (kECScreenWidth- (20 * kECScreenScale)), btnWidtn + height_Delta)];
-    [btn1 setBackgroundColor:ECColorWithHEX(0x56cc79)];
-    
-    CGRect frame = CGRectMake(btn1.mj_x, btn1.mj_y, btn1.width, btn1.height);
-    
-    [btn1 setImageTitleButtonWithFrame:frame image:[UIImage imageNamed:@"icon_wechat_white"] showImageSize:CGSizeMake(24, 24) title:@"微信登录" titleFont:[UIFont systemFontOfSize:15] imagePosition:UIImageOrientationLeft];
-    [btn1 setImage:[UIImage imageNamed:@"icon_wechat_white"] forState:UIControlStateHighlighted];
-    [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(toWechatLogin:) forControlEvents:UIControlEventTouchUpInside];
-    [btn1 addTarget:self action:@selector(toWechatDragExit:) forControlEvents:UIControlEventTouchDragExit];
-    [btn1 addTarget:self action:@selector(toWechatTouchDown:) forControlEvents:UIControlEventTouchDown];
-    btn1.titleLabel.font = kECDoctorFont4;
-    btn1.layer.shadowColor = [kECGreenColor3 CGColor];
-    btn1.layer.cornerRadius = 2.0;
-    [btn1.layer setMasksToBounds:YES];
-    [self.view addSubview:btn1];
-    
-//    btn = [[UIButton alloc] initWithFrame:CGRectMake(kECScreenWidth/2+5, kECScreenHeight - 56, (kECScreenWidth-40)/2, btnWidtn)];
-    UIButton * btn2 = [[UIButton alloc] initWithFrame:CGRectMake(10 * kECScreenScale, kECScreenHeight - 56, (kECScreenWidth- 20 * kECScreenScale), btnWidtn + height_Delta)];
-    [btn2 setBackgroundColor:kECWhiteColor];
-    [btn2 setTitle:@"手机号登录" forState:UIControlStateNormal];
-    [btn2 setTitleColor:ECColorWithHEX(0xcccccc) forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(toLoginByPhone:) forControlEvents:UIControlEventTouchUpInside];
-    [btn2 addTarget:self action:@selector(toLoginByPhoneDragExit:) forControlEvents:UIControlEventTouchDragExit];
-    [btn2 addTarget:self action:@selector(toLoginByPhoneTouchDown:) forControlEvents:UIControlEventTouchDown];
-    btn2.titleLabel.font = kECDoctorFont4;
-    btn2.layer.borderWidth = 0.5f;
-    btn2.layer.borderColor = ECColorWithHEX(0xcccccc).CGColor;
-    btn2.layer.cornerRadius = 2.0;
-    [btn2.layer setMasksToBounds:YES];
-    [self.view addSubview:btn2];
-    
-    self.view.backgroundColor = kECClearColor;//ECColorWithHEX(0x2399A8);
-    
-#ifdef kTestServer
-    UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
-    longPressGr.minimumPressDuration = 1.0;
-    [self.guideScrollView addGestureRecognizer:longPressGr];
-#endif
+    self.title = @"登录";
+    [self addRightBtn];
+    [self addLeftBtn];
+    [self resetViews];
 }
 
 - (void)dealloc
@@ -94,185 +83,91 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
-    if (self.pageControl == nil)
-    {
-        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, kECScreenHeight - 20 - 15 - 41 - 15, kECScreenWidth, 20)];
-        self.pageControl.numberOfPages = 4;
-        self.pageControl.currentPage = 0;
-        self.pageControl.pageIndicatorTintColor = ECColorWithHEX(0xeeeeee);
-        self.pageControl.currentPageIndicatorTintColor = ECColorWithHEX(0x01c7b5);
-        self.pageControl.enabled = NO;
-        [self.view addSubview:self.pageControl];
-    }
-    
-    //屏蔽page, 今后使用可以打开
-    self.pageControl.hidden = YES;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-}
-
-
-#if Re
-
-- (void)longPressToDo:(id)sender
-{
-    UIView *showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kECScreenWidth, 175)];
-    showView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kECScreenWidth, 43)];
-    titleLabel.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    titleLabel.font = [UIFont systemFontOfSize:15];
-    titleLabel.textColor = kECBlackColor2;
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = @"配置测试服务器地址";
-    [showView addSubview:titleLabel];
-    NSInteger index = 1;
-    
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 43, kECScreenWidth, 1)];
-    line.backgroundColor = kECBlackColor5;
-    [showView addSubview:line];
-    
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, kECScreenWidth, 75)];
-    bgView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    [showView addSubview:bgView];
-    
-    if (index == 1)
-    {
-        UIView *logo = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 4, 15)];
-        logo.backgroundColor = kECBlueColor;
-        logo.layer.cornerRadius = 1;
-        [bgView addSubview:logo];
-        
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 5, kECScreenWidth - 40, 25)];
-        titleLabel.backgroundColor = kECClearColor;
-        titleLabel.font = [UIFont systemFontOfSize:15];
-        titleLabel.textColor = kECBlackColor2;
-        titleLabel.textAlignment = NSTextAlignmentLeft;
-        titleLabel.text = @"服务器地址";
-        [bgView addSubview:titleLabel];
-        
-        UITextField *visitContentField = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, kECScreenWidth - 25, 45)];
-        visitContentField.textAlignment = NSTextAlignmentLeft;
-        self.m_serverAddressField = visitContentField;
-        visitContentField.font = [UIFont systemFontOfSize:15];
-        visitContentField.textColor = kECBlackColor2;
-        visitContentField.placeholder = @"请输入需要输入的回访内容";
-        visitContentField.text =  kServerHostStr;
-        [bgView addSubview:visitContentField];
-    }
-    index ++;
-    
-    line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(bgView.frame), kECScreenWidth, 1)];
-    line.backgroundColor = kECBlackColor5;
-    [showView addSubview:line];
-    
-    bgView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(line.frame), kECScreenWidth, 45)];
-    bgView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    [showView addSubview:bgView];
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 5, CGRectGetWidth(bgView.frame)/2-40, CGRectGetHeight(bgView.frame)-10)];
-    [btn addTarget:self action:@selector(onSure) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"确认" forState:UIControlStateNormal];
-    [btn setTitleColor:kECBlueColor forState:UIControlStateNormal];
-    btn.layer.cornerRadius = 5;
-    btn.layer.borderColor = [kECBlueColor CGColor];
-    btn.layer.borderWidth = 1;
-    [bgView addSubview:btn];
-    
-    btn = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth(bgView.frame)/2+20, 5, CGRectGetWidth(bgView.frame)/2-40, CGRectGetHeight(bgView.frame)-10)];
-    [btn addTarget:self action:@selector(onCancel) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"取消" forState:UIControlStateNormal];
-    [btn setTitleColor:kECRedColor forState:UIControlStateNormal];
-    btn.layer.cornerRadius = 5;
-    btn.layer.borderColor = [kECRedColor CGColor];
-    btn.layer.borderWidth = 1;
-    [bgView addSubview:btn];
-    
-    [ShareView defaultShareView].customView = showView;
-    [[ShareView defaultShareView] show];
-}
-
-- (void)onSure
-{
-    NSString *str = [NSString stringEmptyTransform:self.m_serverAddressField.text];
-    [ECNetworkRequestManager configServerHostStr:str];
-    [[ShareView defaultShareView] hide];
-}
-
-#endif
-
-- (void)onCancel
-{
-    [[ECBottomPopView sharedECBottomPopView] hide];
 }
 
 #pragma mark - Private methods
-- (void)_loadScrollView
+- (void)addRightBtn
 {
-    //  UIImageView *baseImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kECScreenWidth, kECScreenHeight)];
-    //  baseImgView.backgroundColor = ECColorWithHEX(0xf6fffe);
-    //  baseImgView.contentMode = UIViewContentModeScaleToFill;
-    //  [self.view addSubview:baseImgView];
-    _guideScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kECScreenWidth,kECScreenHeight)];
-    _guideScrollView.showsHorizontalScrollIndicator = NO;
-    _guideScrollView.showsVerticalScrollIndicator = NO;
-    _guideScrollView.pagingEnabled = YES;
-    _guideScrollView.delegate = self;
-    [self.view addSubview:_guideScrollView];
+    UIButton * rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
+    [rightBtn setTitle:@"免费注册" forState:UIControlStateNormal];
+    [rightBtn setTitleColor:ECColorWithHEX(0x5c87d4) forState:UIControlStateNormal];
+    [rightBtn setTitleColor:ECColorWithHEX(0x888888) forState:UIControlStateHighlighted];
+    rightBtn.titleLabel.font = [UIFont systemFontOfSize:13.f];
+    [rightBtn addTarget:self action:@selector(onRightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self customNavRightViews:@[rightBtn]];
 }
 
-- (void)_loadSubViews
+- (void)addLeftBtn
 {
-    //nib中height设为freeForm，设置成当前屏幕大小
-    self.view.height = kECScreenHeight;
-    //获取图片数据
-    NSMutableArray *guidesImg=[NSMutableArray arrayWithCapacity:4];
-    //获取图片名字
-    for (int i=0; i<1 ; i++) {
-        NSString *guideImg=[NSString stringWithFormat:@"login_guide_logo_%zd", i];
-        [guidesImg addObject:guideImg];
-    }
-    NSArray *bgColors = @[ECColorWithHEX(0xf6fffe),ECColorWithHEX(0xedfff5),ECColorWithHEX(0xf3fbff),ECColorWithHEX(0xfffaf4)];
-    //设置图片视图的大小和设置图片内容
-    for (int i=0; i<guidesImg.count; i++) {
-        //guide图片
-        UIView *imgView=[[UIView alloc]initWithFrame:CGRectMake(kECScreenWidth*i , 0,kECScreenWidth,kECScreenHeight)];
-        imgView.backgroundColor = bgColors[i];
-        imgView.userInteractionEnabled = YES;
-        [self.guideScrollView addSubview:imgView];
+    UIButton * leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 9.5, 20, 20)];
+    [leftBtn setImage:[UIImage imageNamed:@"btn_navi_close_nor"] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"btn_navi_close_sel"] forState:UIControlStateHighlighted];
+    [leftBtn addTarget:self action:@selector(onLeftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self customleftViews:@[leftBtn]];
+}
+
+- (void)resetViews
+{
+    ECBlockSet
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //重置线高度
+        [weakSelf.line_1 setHeight:0.5f];
+        [weakSelf.line_2 setHeight:0.5f];
+        [weakSelf.line_3 setHeight:0.5f];
+        //登录按钮切圆角和高亮颜色
+        weakSelf.loginBtn.layer.cornerRadius = 2.0f;
+        weakSelf.loginBtn.clipsToBounds = YES;
+        [weakSelf.loginBtn setBackgroundColor:ECColorWithHEX(0x888888) forState:UIControlStateHighlighted];
+        [weakSelf.loginBtn addTarget:self action:@selector(toLoginByPhone:) forControlEvents:UIControlEventTouchUpInside];
         
-        UIImageView *titleView = [[UIImageView alloc]initWithFrame:CGRectMake((kECScreenWidth-277)/2 , 40,277,48.5)];
-        titleView.image=[UIImage imageNamed:@"zi"];
-        //[imgView addSubview:titleView];
-        
-//        UIImageView *iconView = [[UIImageView alloc]initWithFrame:CGRectMake((kECScreenWidth-203)/2 ,104*kECScreenHeight/568, 203, 283)];
-        UIImageView *iconView = [[UIImageView alloc]initWithFrame:imgView.bounds];
-        
-        iconView.image=[UIImage imageNamed:guidesImg[i]];
-        [imgView addSubview:iconView];
-    }
-    UIImageView *imgView=[[UIImageView alloc]initWithFrame:CGRectMake(-kECScreenWidth , 0,kECScreenWidth,kECScreenHeight)];
-    [self.guideScrollView addSubview:imgView];
-    
-    imgView=[[UIImageView alloc]initWithFrame:CGRectMake(kECScreenWidth*4, 0,kECScreenWidth,kECScreenHeight)];
-    [self.guideScrollView addSubview:imgView];
-    //滑动视图的内容大小
-    self.guideScrollView.contentSize=CGSizeMake(kECScreenWidth*guidesImg.count, 0);
-    
-    //屏蔽滑动, 今后使用可以打开
-    self.guideScrollView.scrollEnabled = NO;
-    
+    });
+}
+
+# pragma mark - Events
+- (void)onLeftBtnClick:(UIButton *)btn
+{
+    ECBlockSet
+    [self dismissViewControllerAnimated:YES completion:^{
+        if (weakSelf.finishLogin)
+        {
+            weakSelf.finishLogin(NO);
+        }
+    }];
+}
+
+- (void)onRightBtnClick:(UIButton *)btn
+{
+    ECUserRegisterViewController * regVc = [[ECUserRegisterViewController alloc] initWithNibName:@"ECUserRegisterViewController" bundle:[NSBundle mainBundle]];
+    regVc.title = @"快速注册";
+    [self.navigationController pushViewController:regVc animated:YES];
+}
+
+- (IBAction)onKQ88BtnClick:(UIButton *)sender
+{
+    ECLoginKQ88ViewController * kq88LoginVc = [[ECLoginKQ88ViewController alloc] initWithNibName:@"ECLoginKQ88ViewController" bundle:[NSBundle mainBundle]];
+    kq88LoginVc.title = @"授权登录";
+    [self.navigationController pushViewController:kq88LoginVc animated:YES];
+}
+
+- (IBAction)onWeChatBtnClick:(UIButton *)sender
+{
     
 }
+
+- (IBAction)onForgetPswBtnClick:(UIButton *)sender
+{
+    ECForgetPasswordViewController * forgotVC = [[ECForgetPasswordViewController alloc] initWithNibName:@"ECForgetPasswordViewController" bundle:[NSBundle mainBundle]];
+    forgotVC.title = @"找回密码";
+    [self.navigationController pushViewController:forgotVC animated:YES];
+}
+
 
 # pragma mark - 手机验证码登录
 
@@ -280,8 +175,8 @@
 {
     [btn setBackgroundColor:kECWhiteColor];
     
-    ECPhoneLoginController * logVc = [[ECPhoneLoginController alloc] initWithNibName:@"ECPhoneLoginController" bundle:nil];
-    logVc.title = @"手机号快捷登录";
+    ECLoginBindPhoneController * logVc = [[ECLoginBindPhoneController alloc] initWithNibName:@"ECLoginBindPhoneController" bundle:nil];
+    logVc.title = @"绑定手机号码";
     
     ECBlockSet
     logVc.loginSuccess = ^(){
@@ -322,28 +217,7 @@
 
 - (void)toLoginByUsername:(id)sender {
     
-    ECLoginViewController * logVc=[[ECLoginViewController alloc] initWithNibName:@"ECLoginViewController" bundle:nil];
-    //  ECUserRegisterViewController *logVc = [[ECUserRegisterViewController alloc] initWithNibName:@"ECUserRegisterViewController" bundle:nil];
-    ECBlockSet
-    logVc.loginSuccess = ^(){
-        ECBlockGet(strongSelf)
-        if (strongSelf.loginSuccess)
-        {
-            strongSelf.loginSuccess();
-        }
-    };
-    logVc.finishLogin = ^(BOOL isSuccess){
-        ECBlockGet(strongSelf)
-        if (strongSelf)
-        {
-            if (strongSelf.finishLogin)
-            {
-                strongSelf.finishLogin(isSuccess);
-            }
-        }
-    };
     
-    [self.navigationController pushViewController:logVc animated:YES];
 }
 
 
@@ -461,16 +335,12 @@
     ECBlockSet
     if (mobile.length == 0)
     {
-        ECBindUserMobileViewController *vc = [[ECBindUserMobileViewController alloc] initWithNibName:@"ECBindUserMobileViewController" bundle:nil];
+        ECLoginBindPhoneController *vc = [[ECLoginBindPhoneController alloc] initWithNibName:@"ECLoginBindPhoneController" bundle:nil];
         //vc.isHiddenBackBtn = YES;
         //        if (password.length == 0 || needToAddClinic)
         //        {
         //            vc.rightNavBtnTitle = @"下一步";
         //        }
-        vc.compliteBind = ^(ECBindUserMobileViewController *controller){
-            ECBlockGet(strongSelf1)
-            [strongSelf1 compeletLogin];
-        };
         [self.navigationController pushViewController:vc animated:YES];
         [self showSimpleInfo:@"您还没有绑定手机号码,请去绑定"];
     }
@@ -538,35 +408,13 @@
     }
 }
 
-#pragma mark - UIScrollView delegate
-//滑动显示主界面
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    if (scrollView.contentOffset.x <= 0)
-    {
-        self.pageControl.currentPage = 0;
-        self.view.backgroundColor = ECColorWithHEX(0xf6fffe);
-    }
-    else if (scrollView.contentOffset.x == kECScreenWidth)
-    {
-        self.pageControl.currentPage = 1;
-    }
-    else if (scrollView.contentOffset.x == kECScreenWidth*2)
-    {
-        self.pageControl.currentPage = 2;
-    }
-    else if (scrollView.contentOffset.x >= kECScreenWidth*3)
-    {
-        self.pageControl.currentPage = 3;
-        self.view.backgroundColor = ECColorWithHEX(0xfffaf4);
-    }
-}
+
 
 //隐藏状态栏
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 
 @end

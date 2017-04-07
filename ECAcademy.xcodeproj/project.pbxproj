@@ -10,21 +10,20 @@
 		0DEF4B40666C0E084378C4BC /* libPods-ECAcademy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C766C0B3E5C678AA6CC72D /* libPods-ECAcademy.a */; };
 		BC0FACDA1E8E2AD400203FF7 /* Autority.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACBA1E8E2AD400203FF7 /* Autority.plist */; };
 		BC0FACDB1E8E2AD400203FF7 /* ECBaseNavController+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACBC1E8E2AD400203FF7 /* ECBaseNavController+Login.m */; };
-		BC0FACDC1E8E2AD400203FF7 /* ECBindUserMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */; };
-		BC0FACDD1E8E2AD400203FF7 /* ECBindUserMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */; };
 		BC0FACDE1E8E2AD400203FF7 /* ECForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */; };
 		BC0FACDF1E8E2AD400203FF7 /* ECForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */; };
 		BC0FACE01E8E2AD400203FF7 /* ECLoginGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */; };
 		BC0FACE11E8E2AD400203FF7 /* ECLoginGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */; };
-		BC0FACE21E8E2AD400203FF7 /* ECLoginRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */; };
-		BC0FACE31E8E2AD400203FF7 /* ECLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */; };
-		BC0FACE41E8E2AD400203FF7 /* ECLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */; };
-		BC0FACE51E8E2AD400203FF7 /* ECPhoneLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */; };
-		BC0FACE61E8E2AD400203FF7 /* ECPhoneLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */; };
+		BC0FACE51E8E2AD400203FF7 /* ECLoginBindPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACCD1E8E2AD400203FF7 /* ECLoginBindPhoneController.m */; };
+		BC0FACE61E8E2AD400203FF7 /* ECLoginBindPhoneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACCE1E8E2AD400203FF7 /* ECLoginBindPhoneController.xib */; };
 		BC0FACE71E8E2AD400203FF7 /* ECSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */; };
 		BC0FACE81E8E2AD400203FF7 /* ECUserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD21E8E2AD400203FF7 /* ECUserRegisterViewController.m */; };
 		BC0FACE91E8E2AD400203FF7 /* ECUserRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */; };
 		BC0FACEA1E8E2AD400203FF7 /* ECUser+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FACD61E8E2AD400203FF7 /* ECUser+Manager.m */; };
+		BCB300671E95E73600A4BCAE /* ECLoginKQ88ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB300651E95E73600A4BCAE /* ECLoginKQ88ViewController.m */; };
+		BCB300681E95E73600A4BCAE /* ECLoginKQ88ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB300661E95E73600A4BCAE /* ECLoginKQ88ViewController.xib */; };
+		BCB3006D1E963EC400A4BCAE /* ECSettingTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB3006C1E963EC400A4BCAE /* ECSettingTableController.m */; };
+		BCBAEA441E97277900ED23DB /* ECRefereeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBAEA431E97277900ED23DB /* ECRefereeViewController.m */; };
 		BCF253FD1E8E369500703981 /* ECNetworkRequestManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */; };
 		BCF254F11E8E7E4900703981 /* ECScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF254EE1E8E7E4900703981 /* ECScanViewController.m */; };
 		BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF254F01E8E7E4900703981 /* ECScanViewController.xib */; };
@@ -81,6 +80,13 @@
 		D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DE71E84F76B00E8F2E9 /* ECUser.m */; };
 		D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */; };
 		D3CE8DF01E84F82A00E8F2E9 /* ECBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */; };
+		D3D26D961E9629A300743231 /* ECCourseCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D941E9629A300743231 /* ECCourseCollectCell.m */; };
+		D3D26D971E9629A300743231 /* ECCourseCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */; };
+		D3D26D9B1E96322900743231 /* ECCourseHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D991E96322900743231 /* ECCourseHeadView.m */; };
+		D3D26D9C1E96322900743231 /* ECCourseHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */; };
+		D3D26D9F1E96473600743231 /* ECCourseCollectHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */; };
+		D3D4BD901E9490A900CEE249 /* ECTrainListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4BD8E1E9490A900CEE249 /* ECTrainListCell.m */; };
+		D3D4BD911E9490A900CEE249 /* ECTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4BD8F1E9490A900CEE249 /* ECTrainListCell.xib */; };
 		D3DE4B611E8B5F4100DF0584 /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */; };
 		D3DE4B641E8B5F4C00DF0584 /* UIAlertView+BlockKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4B631E8B5F4C00DF0584 /* UIAlertView+BlockKit.m */; };
 /* End PBXBuildFile section */
@@ -109,23 +115,15 @@
 		BC0FACBA1E8E2AD400203FF7 /* Autority.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Autority.plist; sourceTree = "<group>"; };
 		BC0FACBB1E8E2AD400203FF7 /* ECBaseNavController+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECBaseNavController+Login.h"; sourceTree = "<group>"; };
 		BC0FACBC1E8E2AD400203FF7 /* ECBaseNavController+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECBaseNavController+Login.m"; sourceTree = "<group>"; };
-		BC0FACBE1E8E2AD400203FF7 /* ECBindUserMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBindUserMobileViewController.h; sourceTree = "<group>"; };
-		BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBindUserMobileViewController.m; sourceTree = "<group>"; };
-		BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECBindUserMobileViewController.xib; sourceTree = "<group>"; };
 		BC0FACC11E8E2AD400203FF7 /* ECForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECForgetPasswordViewController.h; sourceTree = "<group>"; };
 		BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECForgetPasswordViewController.m; sourceTree = "<group>"; };
 		BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		BC0FACC41E8E2AD400203FF7 /* ECLoginGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginGuideViewController.h; sourceTree = "<group>"; };
 		BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginGuideViewController.m; sourceTree = "<group>"; };
 		BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginGuideViewController.xib; sourceTree = "<group>"; };
-		BC0FACC71E8E2AD400203FF7 /* ECLoginRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginRootController.h; sourceTree = "<group>"; };
-		BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginRootController.m; sourceTree = "<group>"; };
-		BC0FACC91E8E2AD400203FF7 /* ECLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginViewController.h; sourceTree = "<group>"; };
-		BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginViewController.m; sourceTree = "<group>"; };
-		BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginViewController.xib; sourceTree = "<group>"; };
-		BC0FACCC1E8E2AD400203FF7 /* ECPhoneLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPhoneLoginController.h; sourceTree = "<group>"; };
-		BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPhoneLoginController.m; sourceTree = "<group>"; };
-		BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECPhoneLoginController.xib; sourceTree = "<group>"; };
+		BC0FACCC1E8E2AD400203FF7 /* ECLoginBindPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginBindPhoneController.h; sourceTree = "<group>"; };
+		BC0FACCD1E8E2AD400203FF7 /* ECLoginBindPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginBindPhoneController.m; sourceTree = "<group>"; };
+		BC0FACCE1E8E2AD400203FF7 /* ECLoginBindPhoneController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginBindPhoneController.xib; sourceTree = "<group>"; };
 		BC0FACCF1E8E2AD400203FF7 /* ECSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSetPasswordViewController.h; sourceTree = "<group>"; };
 		BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSetPasswordViewController.m; sourceTree = "<group>"; };
 		BC0FACD11E8E2AD400203FF7 /* ECUserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECUserRegisterViewController.h; sourceTree = "<group>"; };
@@ -133,6 +131,13 @@
 		BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECUserRegisterViewController.xib; sourceTree = "<group>"; };
 		BC0FACD51E8E2AD400203FF7 /* ECUser+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECUser+Manager.h"; sourceTree = "<group>"; };
 		BC0FACD61E8E2AD400203FF7 /* ECUser+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECUser+Manager.m"; sourceTree = "<group>"; };
+		BCB300641E95E73600A4BCAE /* ECLoginKQ88ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginKQ88ViewController.h; sourceTree = "<group>"; };
+		BCB300651E95E73600A4BCAE /* ECLoginKQ88ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginKQ88ViewController.m; sourceTree = "<group>"; };
+		BCB300661E95E73600A4BCAE /* ECLoginKQ88ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginKQ88ViewController.xib; sourceTree = "<group>"; };
+		BCB3006B1E963EC400A4BCAE /* ECSettingTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSettingTableController.h; sourceTree = "<group>"; };
+		BCB3006C1E963EC400A4BCAE /* ECSettingTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSettingTableController.m; sourceTree = "<group>"; };
+		BCBAEA421E97277900ED23DB /* ECRefereeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRefereeViewController.h; sourceTree = "<group>"; };
+		BCBAEA431E97277900ED23DB /* ECRefereeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRefereeViewController.m; sourceTree = "<group>"; };
 		BCF253FB1E8E369500703981 /* ECNetworkRequestManager+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECNetworkRequestManager+User.h"; sourceTree = "<group>"; };
 		BCF253FC1E8E369500703981 /* ECNetworkRequestManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ECNetworkRequestManager+User.m"; sourceTree = "<group>"; };
 		BCF254EE1E8E7E4900703981 /* ECScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECScanViewController.m; sourceTree = "<group>"; };
@@ -239,6 +244,17 @@
 		D3CE8DEB1E84F7A100E8F2E9 /* NSString+ECExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECExtensions.m"; sourceTree = "<group>"; };
 		D3CE8DEE1E84F82A00E8F2E9 /* ECBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBaseObject.h; sourceTree = "<group>"; };
 		D3CE8DEF1E84F82A00E8F2E9 /* ECBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBaseObject.m; sourceTree = "<group>"; };
+		D3D26D931E9629A300743231 /* ECCourseCollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectCell.h; sourceTree = "<group>"; };
+		D3D26D941E9629A300743231 /* ECCourseCollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectCell.m; sourceTree = "<group>"; };
+		D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseCollectCell.xib; sourceTree = "<group>"; };
+		D3D26D981E96322900743231 /* ECCourseHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseHeadView.h; sourceTree = "<group>"; };
+		D3D26D991E96322900743231 /* ECCourseHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseHeadView.m; sourceTree = "<group>"; };
+		D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCourseHeadView.xib; sourceTree = "<group>"; };
+		D3D26D9D1E96473600743231 /* ECCourseCollectHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCourseCollectHeadView.h; sourceTree = "<group>"; };
+		D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCourseCollectHeadView.m; sourceTree = "<group>"; };
+		D3D4BD8D1E9490A900CEE249 /* ECTrainListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECTrainListCell.h; sourceTree = "<group>"; };
+		D3D4BD8E1E9490A900CEE249 /* ECTrainListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECTrainListCell.m; sourceTree = "<group>"; };
+		D3D4BD8F1E9490A900CEE249 /* ECTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECTrainListCell.xib; sourceTree = "<group>"; };
 		D3DE4B5F1E8B5F4100DF0584 /* NSArray+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Util.h"; sourceTree = "<group>"; };
 		D3DE4B601E8B5F4100DF0584 /* NSArray+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Util.m"; sourceTree = "<group>"; };
 		D3DE4B621E8B5F4C00DF0584 /* UIAlertView+BlockKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockKit.h"; sourceTree = "<group>"; };
@@ -310,28 +326,23 @@
 		BC0FACBD1E8E2AD400203FF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC0FACBE1E8E2AD400203FF7 /* ECBindUserMobileViewController.h */,
-				BC0FACBF1E8E2AD400203FF7 /* ECBindUserMobileViewController.m */,
-				BC0FACC01E8E2AD400203FF7 /* ECBindUserMobileViewController.xib */,
-				BC0FACC11E8E2AD400203FF7 /* ECForgetPasswordViewController.h */,
-				BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */,
-				BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */,
 				BC0FACC41E8E2AD400203FF7 /* ECLoginGuideViewController.h */,
 				BC0FACC51E8E2AD400203FF7 /* ECLoginGuideViewController.m */,
 				BC0FACC61E8E2AD400203FF7 /* ECLoginGuideViewController.xib */,
-				BC0FACC71E8E2AD400203FF7 /* ECLoginRootController.h */,
-				BC0FACC81E8E2AD400203FF7 /* ECLoginRootController.m */,
-				BC0FACC91E8E2AD400203FF7 /* ECLoginViewController.h */,
-				BC0FACCA1E8E2AD400203FF7 /* ECLoginViewController.m */,
-				BC0FACCB1E8E2AD400203FF7 /* ECLoginViewController.xib */,
-				BC0FACCC1E8E2AD400203FF7 /* ECPhoneLoginController.h */,
-				BC0FACCD1E8E2AD400203FF7 /* ECPhoneLoginController.m */,
-				BC0FACCE1E8E2AD400203FF7 /* ECPhoneLoginController.xib */,
-				BC0FACCF1E8E2AD400203FF7 /* ECSetPasswordViewController.h */,
-				BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */,
+				BC0FACCC1E8E2AD400203FF7 /* ECLoginBindPhoneController.h */,
+				BC0FACCD1E8E2AD400203FF7 /* ECLoginBindPhoneController.m */,
+				BC0FACCE1E8E2AD400203FF7 /* ECLoginBindPhoneController.xib */,
 				BC0FACD11E8E2AD400203FF7 /* ECUserRegisterViewController.h */,
 				BC0FACD21E8E2AD400203FF7 /* ECUserRegisterViewController.m */,
 				BC0FACD31E8E2AD400203FF7 /* ECUserRegisterViewController.xib */,
+				BCB300641E95E73600A4BCAE /* ECLoginKQ88ViewController.h */,
+				BCB300651E95E73600A4BCAE /* ECLoginKQ88ViewController.m */,
+				BCB300661E95E73600A4BCAE /* ECLoginKQ88ViewController.xib */,
+				BC0FACC11E8E2AD400203FF7 /* ECForgetPasswordViewController.h */,
+				BC0FACC21E8E2AD400203FF7 /* ECForgetPasswordViewController.m */,
+				BC0FACC31E8E2AD400203FF7 /* ECForgetPasswordViewController.xib */,
+				BC0FACCF1E8E2AD400203FF7 /* ECSetPasswordViewController.h */,
+				BC0FACD01E8E2AD400203FF7 /* ECSetPasswordViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -595,6 +606,14 @@
 				D325D5F11E8A4B1500A27A3A /* ECMainCourseCell.h */,
 				D325D5F21E8A4B1500A27A3A /* ECMainCourseCell.m */,
 				D325D5F31E8A4B1500A27A3A /* ECMainCourseCell.xib */,
+				D3D26D931E9629A300743231 /* ECCourseCollectCell.h */,
+				D3D26D941E9629A300743231 /* ECCourseCollectCell.m */,
+				D3D26D951E9629A300743231 /* ECCourseCollectCell.xib */,
+				D3D26D981E96322900743231 /* ECCourseHeadView.h */,
+				D3D26D991E96322900743231 /* ECCourseHeadView.m */,
+				D3D26D9A1E96322900743231 /* ECCourseHeadView.xib */,
+				D3D26D9D1E96473600743231 /* ECCourseCollectHeadView.h */,
+				D3D26D9E1E96473600743231 /* ECCourseCollectHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -614,6 +633,10 @@
 			children = (
 				D3CE8DC11E84EF0500E8F2E9 /* ECMainMyViewController.h */,
 				D3CE8DC21E84EF0500E8F2E9 /* ECMainMyViewController.m */,
+				BCB3006B1E963EC400A4BCAE /* ECSettingTableController.h */,
+				BCB3006C1E963EC400A4BCAE /* ECSettingTableController.m */,
+				BCBAEA421E97277900ED23DB /* ECRefereeViewController.h */,
+				BCBAEA431E97277900ED23DB /* ECRefereeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -661,6 +684,9 @@
 		D3CE8DAB1E83A20400E8F2E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D3D4BD8D1E9490A900CEE249 /* ECTrainListCell.h */,
+				D3D4BD8E1E9490A900CEE249 /* ECTrainListCell.m */,
+				D3D4BD8F1E9490A900CEE249 /* ECTrainListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -988,16 +1014,18 @@
 				D3CE8D6C1E83989500E8F2E9 /* LaunchScreen.storyboard in Resources */,
 				BC0FACDA1E8E2AD400203FF7 /* Autority.plist in Resources */,
 				D3CE8D691E83989500E8F2E9 /* Assets.xcassets in Resources */,
-				BC0FACE61E8E2AD400203FF7 /* ECPhoneLoginController.xib in Resources */,
-				BC0FACDD1E8E2AD400203FF7 /* ECBindUserMobileViewController.xib in Resources */,
+				BC0FACE61E8E2AD400203FF7 /* ECLoginBindPhoneController.xib in Resources */,
+				D3D4BD911E9490A900CEE249 /* ECTrainListCell.xib in Resources */,
 				BC0FACDF1E8E2AD400203FF7 /* ECForgetPasswordViewController.xib in Resources */,
+				D3D26D971E9629A300743231 /* ECCourseCollectCell.xib in Resources */,
 				BCF254F21E8E7E4900703981 /* ECScanViewController.xib in Resources */,
 				D3CE8DD51E84F6EC00E8F2E9 /* common.sqlite in Resources */,
+				BCB300681E95E73600A4BCAE /* ECLoginKQ88ViewController.xib in Resources */,
 				D3CE8DD71E84F6F100E8F2E9 /* cache.sqlite in Resources */,
 				D325D5F51E8A4B1500A27A3A /* ECMainCourseCell.xib in Resources */,
 				BC0FACE91E8E2AD400203FF7 /* ECUserRegisterViewController.xib in Resources */,
 				D3CE8D671E83989500E8F2E9 /* Main.storyboard in Resources */,
-				BC0FACE41E8E2AD400203FF7 /* ECLoginViewController.xib in Resources */,
+				D3D26D9C1E96322900743231 /* ECCourseHeadView.xib in Resources */,
 				D3CE8DDB1E84F73900E8F2E9 /* ECDoctorExpertListKey.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1074,25 +1102,25 @@
 				D3DE4B641E8B5F4C00DF0584 /* UIAlertView+BlockKit.m in Sources */,
 				D325D5F41E8A4B1500A27A3A /* ECMainCourseCell.m in Sources */,
 				BC0FACE71E8E2AD400203FF7 /* ECSetPasswordViewController.m in Sources */,
-				BC0FACE31E8E2AD400203FF7 /* ECLoginViewController.m in Sources */,
 				D3AB42211E8CFA8400F7FF3C /* NJKWebViewProgressView.m in Sources */,
 				D325D5DD1E89F86900A27A3A /* NSString+Date.m in Sources */,
 				D325D5E11E89FAD800A27A3A /* UIButton+Extension.m in Sources */,
 				D3625C941E8BAEDF00446292 /* ECNetworkRequestManager+Common.m in Sources */,
 				BC0FACEA1E8E2AD400203FF7 /* ECUser+Manager.m in Sources */,
 				D3CE8DC01E84EEE600E8F2E9 /* ECMainTrainViewController.m in Sources */,
+				BCBAEA441E97277900ED23DB /* ECRefereeViewController.m in Sources */,
 				D3CE8DE41E84F74000E8F2E9 /* ECDataBaseManager+Write.m in Sources */,
 				D3CE8DB71E84EE5500E8F2E9 /* ECMainCourseViewController.m in Sources */,
-				BC0FACE21E8E2AD400203FF7 /* ECLoginRootController.m in Sources */,
+				BCB3006D1E963EC400A4BCAE /* ECSettingTableController.m in Sources */,
 				BCF254F11E8E7E4900703981 /* ECScanViewController.m in Sources */,
 				D325D5DA1E89F7B700A27A3A /* NSString+CalculateSize.m in Sources */,
 				BC0FACDB1E8E2AD400203FF7 /* ECBaseNavController+Login.m in Sources */,
 				D325D5D71E89F5A400A27A3A /* UIView+Extension.m in Sources */,
-				BC0FACDC1E8E2AD400203FF7 /* ECBindUserMobileViewController.m in Sources */,
 				D325D5F81E8A5F9E00A27A3A /* UIViewController+ECCommonMethods.m in Sources */,
 				D325D5EF1E8A10FB00A27A3A /* ECMenuView.m in Sources */,
 				D325D5CC1E89F12400A27A3A /* NSObject+RunTimeUtility.m in Sources */,
 				D325D5EB1E8A085B00A27A3A /* ECBaseTableView.m in Sources */,
+				D3D26D961E9629A300743231 /* ECCourseCollectCell.m in Sources */,
 				D3625C911E8B98DE00446292 /* ECCourseListViewController.m in Sources */,
 				D3CE8DEC1E84F7A100E8F2E9 /* NSString+ECExtensions.m in Sources */,
 				D3AB42201E8CFA8400F7FF3C /* NJKWebViewProgress.m in Sources */,
@@ -1102,12 +1130,14 @@
 				BC0FACE01E8E2AD400203FF7 /* ECLoginGuideViewController.m in Sources */,
 				BC0FACE81E8E2AD400203FF7 /* ECUserRegisterViewController.m in Sources */,
 				D39B17CE1E88A22E0002308D /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
-				BC0FACE51E8E2AD400203FF7 /* ECPhoneLoginController.m in Sources */,
+				BC0FACE51E8E2AD400203FF7 /* ECLoginBindPhoneController.m in Sources */,
 				BC0FACDE1E8E2AD400203FF7 /* ECForgetPasswordViewController.m in Sources */,
 				D3DE4B611E8B5F4100DF0584 /* NSArray+Util.m in Sources */,
 				D3CE8D5E1E83989500E8F2E9 /* AppDelegate.m in Sources */,
 				D325D5CF1E89F12B00A27A3A /* UIImage+ECExtensions.m in Sources */,
 				D3CE8DBA1E84EE7600E8F2E9 /* ECBaseViewController.m in Sources */,
+				D3D4BD901E9490A900CEE249 /* ECTrainListCell.m in Sources */,
+				D3D26D9F1E96473600743231 /* ECCourseCollectHeadView.m in Sources */,
 				D325D5D31E89F20900A27A3A /* ECCommenMethod.m in Sources */,
 				D3CE8DE31E84F74000E8F2E9 /* ECDataBaseManager+Read.m in Sources */,
 				D3AB421A1E8CF9FA00F7FF3C /* ECBaseWebViewController.m in Sources */,
@@ -1122,6 +1152,8 @@
 				D325D5E81E8A03E000A27A3A /* ECBaseTabbarViewController.m in Sources */,
 				D3AB42241E8E055700F7FF3C /* ECBottomPopView.m in Sources */,
 				D3CE8DE81E84F76B00E8F2E9 /* ECUser.m in Sources */,
+				BCB300671E95E73600A4BCAE /* ECLoginKQ88ViewController.m in Sources */,
+				D3D26D9B1E96322900743231 /* ECCourseHeadView.m in Sources */,
 				D3CE8D5B1E83989500E8F2E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -103,6 +103,7 @@
 {
     UIView *baseView = [UIView customBackImage:backImg title:title target:self action:@selector(onBack:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:baseView];
+    
 }
 
 - (void)onBack:(id)sender

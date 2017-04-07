@@ -69,8 +69,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (self.tableConfig.isMutiSection) {
-        NSArray *arr = self.tableConfig.dataSource;
-        if ([arr isMemberOfClass:[NSArray class]]) {
+        NSArray *arr = self.tableConfig.dataSource[section];
+        if ([arr isKindOfClass:[NSArray class]]) {
             return arr.count;
         }
     }else{
@@ -113,7 +113,7 @@
     }else if (self.tableConfig.cellHeight > 0){
         return self.tableConfig.cellHeight;
     }
-    return 0;
+    return 0.1f;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -121,14 +121,17 @@
     if (self.tableConfig.sectionHeaderHeight) {
         return self.tableConfig.sectionHeaderHeight(tableView,section);
     }
-    return 0;
+    return 0.1f;
 }
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
+    
     if (self.tableConfig.sectionFooterHeight) {
         return self.tableConfig.sectionFooterHeight(tableView,section);
+    }else if (self.tableConfig.sectionHeight > 0){
+        return self.tableConfig.sectionHeight;
     }
-    return 0;
+    return 0.1f;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -194,7 +197,7 @@
     }
     if (_dataSource.count > 0) {
         id object = [_dataSource firstObject];
-        if ([object isMemberOfClass:[NSArray class]]) {
+        if ([object isKindOfClass:[NSArray class]]) {
             _isMutiSection = YES;
         }else{
             _isMutiSection = NO;

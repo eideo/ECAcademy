@@ -28,6 +28,16 @@
 
 
 
+/**
+ 根据文字图片动态调整button
+
+ @param btnFrame frame
+ @param image 图片
+ @param imageSize 图片大小
+ @param title 文字
+ @param titleFont 字体
+ @param imagePosition 位置
+ */
 - (void)setImageTitleButtonWithFrame:(CGRect)btnFrame image:(UIImage *)image showImageSize:(CGSize)imageSize title:(NSString *)title titleFont:(UIFont *)titleFont imagePosition:(UIImageOrientation)imagePosition;
 
 /**

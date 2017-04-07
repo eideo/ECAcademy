@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+AOP.h"
-
+#import "UIImage+ECExtensions.h"
 #define HWAssert(condition, ...) \
 if (!(condition)){ HWWLog(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__);} \
 NSAssert(condition, @"%@", __VA_ARGS__);
@@ -15,7 +15,7 @@ NSAssert(condition, @"%@", __VA_ARGS__);
 void HWWLog(const char* file, const char* func, int line, NSString* fmt, ...)
 {
     va_list args; va_start(args, fmt);
-    NSLog(@"%s|%s|%d|%@", file, func, line, [[NSString alloc] initWithFormat:fmt arguments:args]);
+    DLog(@"%s|%s|%d|%@", file, func, line, [[NSString alloc] initWithFormat:fmt arguments:args]);
     va_end(args);
 }
 
@@ -69,6 +69,11 @@ void HWWLog(const char* file, const char* func, int line, NSString* fmt, ...)
 
 @end
 
+#ifdef DEBUG
+//DEBUG使用safe不方便找错bug, 所以不使用
+
+#else
+
 
 # pragma mark - NSArray
 
@@ -84,11 +89,11 @@ void HWWLog(const char* file, const char* func, int line, NSString* fmt, ...)
         
         
         /* iOS9 以上，没内容类型是__NSArray0 */
-         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
-         {
-             obj = [[NSArray alloc] init];
-             [obj swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(swizzleObjectAtIndex0:)];
-         }
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+        {
+            obj = [[NSArray alloc] init];
+            [obj swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(swizzleObjectAtIndex0:)];
+        }
         
     });
 }
@@ -193,7 +198,6 @@ void HWWLog(const char* file, const char* func, int line, NSString* fmt, ...)
 
 @end
 
-
 #pragma mark - NSDictionary
 @implementation NSDictionary (Safe)
 + (void)load
@@ -278,6 +282,10 @@ void HWWLog(const char* file, const char* func, int line, NSString* fmt, ...)
 }
 
 @end
+
+#endif
+
+
 
 # pragma mark - UIView Touch Effect
 @interface UIView ()
@@ -451,6 +459,120 @@ static NSString * uiview_touch_effect_higlightcolor_key = @"uiview_touch_effect_
         [self.nextResponder touchesCancelled:touches withEvent:event];
     }
 }
+
+
+@end
+
+
+
+# pragma mark - UILabel Font Adapter
+//不同设备的屏幕比例(当然倍数可以自己控制)
+#define Font_Adapter_SizeScale (([UIScreen mainScreen].bounds.size.height > 568) ? [UIScreen mainScreen].bounds.size.height/568 : 1)
+
+@implementation UIButton (myFont)
+
++ (void)load{
+    Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
+    Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
+    method_exchangeImplementations(imp, myImp);
+}
+
+- (id)myInitWithCoder:(NSCoder*)aDecode{
+    [self myInitWithCoder:aDecode];
+    if (self) {
+        //部分不改变字体的 把tag值设置成333才回去适配
+        if(self.titleLabel.tag == 333){
+            CGFloat fontSize = self.titleLabel.font.pointSize;
+            self.titleLabel.font = [UIFont systemFontOfSize:fontSize*Font_Adapter_SizeScale];
+        }
+    }
+    return self;
+}
+
+
+@end
+
+
+# pragma mark - UIButton Font Adapter
+@implementation UILabel (myFont)
+
++ (void)load{
+    Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
+    Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
+    method_exchangeImplementations(imp, myImp);
+}
+
+- (id)myInitWithCoder:(NSCoder*)aDecode{
+    [self myInitWithCoder:aDecode];
+    if (self) {
+        //部分不改变字体的 把tag值设置成333才回去适配
+        if(self.tag == 333){
+            CGFloat fontSize = self.font.pointSize;
+            self.font = [UIFont systemFontOfSize:fontSize*Font_Adapter_SizeScale];
+        }
+    }
+    return self;
+}
+
+@end
+
+
+
+@implementation UIViewController (navBar)
++ (void)load{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        /* 类方法 */
+        UIViewController * obj = [[UIViewController alloc] init];
+        [obj swizzleInstanceMethod:@selector(viewDidLoad) withMethod:@selector(swizzleViewDidLoad)];
+        [obj swizzleInstanceMethod:@selector(init) withMethod:@selector(swizzleInit)];
+        [obj swizzleInstanceMethod:@selector(viewDidAppear:) withMethod:@selector(swizzleViewDidAppear:)];
+    });
+}
+
+
+-(void)swizzleViewDidLoad{
+    [self initNavBarProperty];
+    [self swizzleViewDidLoad];
+}
+
+-(void)swizzleInit
+{
+    self.hidesBottomBarWhenPushed = YES;
+    [self swizzleInit];
+}
+-(void)swizzleViewDidAppear:(BOOL)animated
+{
+    [self swizzleViewDidAppear:animated];
+    //自定义返回按钮手势会消失
+    [self enablePopGesture];
+}
+
+-(void)initNavBarProperty
+{
+    // 设置导航条的色调 理解为"混合色"
+    UINavigationController *nav = (UINavigationController *)([self isKindOfClass:[UINavigationController class]]?self:self.navigationController);
+    nav.navigationBar.barTintColor = [UIColor whiteColor];
+    // 导航栏默认是半透明状态
+    nav.navigationBar.backgroundColor = [UIColor whiteColor];
+    // 导航栏标题颜色
+    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : kECBlackColor2}];
+    UIImage *colorImage = [UIImage imageWithColor:[UIColor whiteColor]];
+    [nav.navigationBar setBackgroundImage:colorImage forBarMetrics:UIBarMetricsDefault];
+    [nav.navigationBar setShadowImage:[UIImage imageWithColor:kECBlackColor5]];
+    if (nav.viewControllers.count > 1) {
+        [self initNavBackItem];
+    }
+
+}
+
+-(void)initNavBackItem
+{
+    [self customBackImage:nil title:nil];
+}
+
+
+
 
 
 @end

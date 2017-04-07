@@ -54,6 +54,7 @@
  */
 @property (nonatomic, strong)NSMutableArray *rightDataSource;
 
+@property (nonatomic, assign)NSTextAlignment textAligment;
 
 @end
 
@@ -62,6 +63,7 @@
 @property (nonatomic, copy)NSString *value;
 @property (nonatomic, strong)UIImage *icon;
 @property (nonatomic, strong)UIImage *checkedImage;
+
 
 + (instancetype)itemWithTitle:(NSString *)title value:(NSString *)value icon:(UIImage *)icon checkedImage:(UIImage *)checkedImage;
 

@@ -7,17 +7,26 @@
 //  Copyright © 2016年 yellowei. All rights reserved.
 //
 
+//Controllers
 #import "ECBaseNavController+Login.h"
+#import "ECLoginGuideViewController.h"
+
+//Tools
 #import "NSObject+AOP.h"
-#import "ECLoginRootController.h"
+
+//Models
 #import "ECUser.h"
+
+//Views
+
 
 
 @implementation ECBaseNavController (Login)
 
 +(void)load
 {
-    [ECBaseNavController swizzleClassMethod:@selector(pushViewController:animated:) withMethod:@selector(aop_pushViewController:animated:)];
+    ECBaseNavController * navObj = [[ECBaseNavController alloc] init];
+    [navObj swizzleInstanceMethod:@selector(pushViewController:animated:) withMethod:@selector(aop_pushViewController:animated:)];
 
 }
 
@@ -34,7 +43,7 @@
         {
             DLog(@"%@ claaName",NSStringFromClass([viewController class]));
             //1.获取权限信息
-            if (![ECUser standardUser])
+            if (![ECUser getStandardUser])
             {
                 [self userNeedLoginWithController:viewController];
                 
@@ -57,8 +66,21 @@
 
 - (void)userNeedLoginWithController:(UIViewController *)viewController
 {
-    ECLoginRootController * logVc = [[ECLoginRootController alloc] init];
-    [self aop_pushViewController:logVc animated:YES];
+    ECLoginGuideViewController * logVc = [[ECLoginGuideViewController alloc] initWithNibName:@"ECLoginGuideViewController" bundle:nil];
+    
+    ECBlockSet
+    logVc.loginSuccess = ^(){
+        ECBlockGet(strongSelf1)
+        
+    };
+    
+    logVc.finishLogin = ^(BOOL isSuccess){
+
+    };
+    
+    ECBaseNavController * nav = [[ECBaseNavController alloc] initWithRootViewController:logVc];
+    
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 

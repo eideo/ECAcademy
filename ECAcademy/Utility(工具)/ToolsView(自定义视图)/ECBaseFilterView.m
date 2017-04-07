@@ -10,7 +10,7 @@
 #import "NSString+CalculateSize.h"
 #define kRightTableWidth (kECScreenWidth*2/3.f)
 #define kSelCellBgColor [UIColor whiteColor]
-#define kNorCellBgColor kECBlackColor5
+#define kNorCellBgColor kECBackgroundColor
 @interface ECBaseFilterView()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong)UIScrollView *pageView;
 @property (nonatomic, strong)UITableView *tableView;
@@ -27,6 +27,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame data:(NSMutableArray *)data
 {
+    
     self = [super initWithFrame:frame];
     if (self)
     {
@@ -111,6 +112,7 @@
         
         tableView.backgroundColor = [UIColor whiteColor];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
         self.tableView = tableView;
         
         UITableView *tableView2 = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kECScreenWidth, 0)];
@@ -196,8 +198,9 @@
                     self.selectedModel = self.dataSource[i];
                 }
                 self.singleView.left = i*kECScreenWidth/self.dataSource.count + (kECScreenWidth/self.dataSource.count - 12)/2;
-                [self.tableView reloadData];
-                [self.rightTableView reloadData];
+//                [self.tableView reloadData];
+//                [self.rightTableView reloadData];
+                [self refreshTables];
                 self.singleView.hidden = YES;
                 self.tableView.hidden = NO;
                 height = self.selectedModel.dataSource.count * 44;
@@ -285,7 +288,7 @@
             btn.selected = NO;
         }
     }
-
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -318,8 +321,9 @@
         cell = [[ECCustomerFilterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     UIView *selView = [[UIView alloc] initWithFrame:cell.bounds];
+    selView.backgroundColor = [UIColor whiteColor];
     cell.selectedBackgroundView = selView;
-    cell.backgroundColor = !rightTable&&self.selectedModel.rightDataSource.count > 0?kECBlackColor5:[UIColor whiteColor];
+    cell.backgroundColor = !rightTable&&self.selectedModel.rightDataSource.count > 0?kNorCellBgColor:[UIColor whiteColor];
     if (self.selectedModel && [self.selectedModel isKindOfClass:[ECCustomerFilterModel class]])
     {
         if (dataArr.count > indexPath.row)
@@ -337,11 +341,27 @@
             }
             cell.m_title.text = item.title;
             cell.m_title.width = tempSize.width + 5;
+            if (self.tableView == tableView) {
+                CGFloat right = cell.width;
+                CGFloat columWidth = 0.f;
+                NSUInteger index = [self.dataSource indexOfObject:self.selectedModel];
+                 
+                if (self.dataSource.count > 0) {
+                    columWidth = kECScreenWidth / self.dataSource.count;
+                    right = index * columWidth;
+                }
+                
+                cell.m_title.left  = right + (columWidth - cell.m_title.width)/2.f;
+            }else{
+                cell.m_title.left  = (tableView.width - cell.m_title.width)/2.f;
+            }
+            
+            
             
             if (item.icon)
             {
                 cell.m_icon.image = item.icon;
-                cell.m_icon.left = CGRectGetMaxX(cell.m_title.frame) + 15;
+                cell.m_icon.right = CGRectGetMinX(cell.m_title.frame) - 5;
                 cell.m_icon.hidden = NO;
             }
             else
@@ -373,7 +393,7 @@
         }
         cell.m_checkIcon.hidden = YES;
     }
-    [cell setSelected:YES animated:NO];
+    
     return cell;
 }
 
@@ -442,13 +462,33 @@
             return self.backGroudView;
         }
     }
-    
-    
-    
     return v;
 }
 
+-(void)refreshTables
+{
+    if (self.tableView) {
+        [self.tableView reloadData];
+    }
+    
+    if (self.rightTableView) {
+        [self.rightTableView reloadData];
+    }
+    NSInteger row = 0;
+    NSMutableArray *selectDataArr = self.selectedModel.dataSource;
+    if (selectDataArr.count > 0) {
+        for (NSInteger i = 0; i< selectDataArr.count; i++) {
+            ECCustomerFilterItem *model = selectDataArr[i];
+            if(self.selectedModel.selectedItem == model){
+                row = i;
+            }
+        }
+    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
 
+}
 
 @end
 
@@ -478,7 +518,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 100, 44)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 100, 43)];
         label.backgroundColor = kECClearColor;
         label.textColor = kECBlackColor2;
         label.font = [UIFont systemFontOfSize:15];
@@ -495,9 +535,9 @@
         self.m_checkIcon = imageView;
         [self addSubview:imageView];
         
-        self.m_lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, kECScreenWidth, 0.5)];
-        self.m_lineView.backgroundColor = kECBlackColor5;
-        [self addSubview:self.m_lineView];
+//        self.m_lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, kECScreenWidth, 0.5)];
+//        self.m_lineView.backgroundColor = kECBlackColor5;
+//        [self addSubview:self.m_lineView];
         
         self.m_selectLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 43.5)];
         self.m_selectLineView.backgroundColor = [UIColor colorWithPatternImage:kECGreenImage2];

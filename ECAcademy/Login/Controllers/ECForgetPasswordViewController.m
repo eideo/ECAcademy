@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
     [self.showPasswordBtn setImage:[UIImage imageNamed:@"see_password_selected"] forState:UIControlStateSelected];
     [self.showPasswordBtn setImage:[UIImage imageNamed:@"see_password"] forState:UIControlStateNormal];
     
@@ -57,12 +57,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navBgView.backgroundColor = kECGreenColor2;
-    self.bgScrollView.contentSize = CGSizeMake(kECScreenWidth, kECScreenHeight);
-    [self setBGScrollViewHeight:kECScreenHeight];
-    [self.bgScrollView setUserInteractionEnabled:YES];
-    [self.navigationController setNavigationBarHidden:YES];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

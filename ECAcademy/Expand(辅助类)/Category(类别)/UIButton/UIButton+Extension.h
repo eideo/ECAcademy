@@ -9,19 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (Extension)
+
+@property (nonatomic, strong) NSMutableDictionary * colors;
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
+- (UIColor *)backgroundColorForState:(UIControlState)state;
+
 /**
  *  构建图片文字按钮
- *
- *  @param btnFrame      按钮frame
- *  @param image         <#image description#>
- *  @param imageSize     <#imageSize description#>
- *  @param title         <#title description#>
- *  @param titleFont     <#titleFont description#>
- *  @param imagePosition <#imagePosition description#>
- *
- *  @return <#return value description#>
- *
- *  Supplied explanation by linsen on 2016-05-26 18:23:19
  */
 + (UIButton *)imageTitleButtonWithFrame:(CGRect)btnFrame image:(UIImage *)image showImageSize:(CGSize)imageSize title:(NSString *)title titleFont:(UIFont *)titleFont imagePosition:(UIImageOrientation)imagePosition buttonType:(UIButtonType)buttonType;
 
@@ -38,5 +33,6 @@
  @return button
  */
 + (UIButton *)customBackButtonWithTarget:(id)target action:(SEL)action;
+
 
 @end

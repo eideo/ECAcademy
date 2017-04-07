@@ -59,6 +59,7 @@
 #define kECGreenColor  ECColorWithHEX(0x9cce3c)
 #define kECClearColor  [UIColor clearColor]
 
+#define kECBlueColor1  ECColorWithHEX(0x5c87d4)
 
 #define kECGreenColor1  ECColorWithHEX(0xb2eee9)
 #define kECGreenColor2  ECColorWithHEX(0x00c5b5)
@@ -80,7 +81,7 @@
 #pragma mark - Font Define
 #define kSystemFontSize(fontSize) [UIFont systemFontOfSize:fontSize]
 #define kECDoctorFont1  [UIFont systemFontOfSize:10]
-#define kECDoctorFont2  [UIFont systemFontOfSize:11]
+#define kECDoctorFont2  [UIFont systemFontOfSize:12]
 #define kECDoctorFont3  [UIFont systemFontOfSize:14]
 #define kECDoctorFont4  [UIFont systemFontOfSize:15]
 #define kECDoctorFont5  [UIFont systemFontOfSize:17]

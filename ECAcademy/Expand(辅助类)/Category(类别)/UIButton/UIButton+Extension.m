@@ -9,7 +9,25 @@
 #import "UIButton+Extension.h"
 #import "UIView+Extension.h"
 #import "NSString+CalculateSize.h"
+#import <objc/runtime.h>
+
+
 @implementation UIButton (Extension)
+
+static NSString * uibutton_my_colors_key = @"uibutton_my_colors_key";
+
+- (NSMutableDictionary *)colors
+{
+    return objc_getAssociatedObject(self, &uibutton_my_colors_key);
+}
+
+- (void)setColors:(NSMutableDictionary *)colors
+{
+    objc_setAssociatedObject(self, &uibutton_my_colors_key, colors, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+
+
 + (UIButton *)imageTitleButtonWithFrame:(CGRect)btnFrame image:(UIImage *)image showImageSize:(CGSize)imageSize title:(NSString *)title titleFont:(UIFont *)titleFont imagePosition:(UIImageOrientation)imagePosition buttonType:(UIButtonType)buttonType
 {
     UIButton *btn = [UIButton buttonWithType:buttonType];
@@ -106,5 +124,86 @@
     [baseView setImageEdgeInsets:UIEdgeInsetsMake(14, 15, 15, 2)];
     return baseView;
 }
+
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state
+{
+    if (!self.colors)
+    {
+        self.colors = [[NSMutableDictionary alloc] init];
+    }
+    // If it is normal then set the standard background here
+    if (state == UIControlStateNormal)
+    {
+        [super setBackgroundColor:backgroundColor];
+    }
+    else
+    {
+        UIColor * originalColor = [self.colors objectForKey:[self keyForState:UIControlStateNormal]];
+        if (!originalColor)
+        {
+            [self.colors setValue:self.backgroundColor forKey:[self keyForState:UIControlStateNormal]];
+        }
+        
+    }
+    
+    // Store the background colour for that state
+    [self.colors setValue:backgroundColor forKey:[self keyForState:state]];
+    
+}
+- (UIColor *)backgroundColorForState:(UIControlState)state
+{
+    return [self.colors valueForKey:[self keyForState:state]];
+}
+- (void)setHighlighted:(BOOL)highlighted
+{
+    // Do original Highlight
+    [super setHighlighted:highlighted];
+    
+    UIColor * originalColor = [self.colors objectForKey:[self keyForState:UIControlStateNormal]];
+    if (originalColor)
+    {
+        // Highlight with new colour OR replace with orignial
+        NSString *highlightedKey = [self keyForState:UIControlStateHighlighted];
+        UIColor *highlightedColor = [self.colors valueForKey:highlightedKey];
+        if (highlighted && highlightedColor) {
+            [super setBackgroundColor:highlightedColor];
+        }
+        else
+        {
+            // 由于系统在调用setSelected后，会再触发一次setHighlighted，故做如下处理，否则，背景色会被最后一次的覆盖掉。
+            if ([self isSelected])
+            {
+                NSString *selectedKey = [self keyForState:UIControlStateSelected];
+                UIColor *selectedColor = [self.colors valueForKey:selectedKey];
+                [super setBackgroundColor:selectedColor];
+            }
+            else
+            {
+                NSString *normalKey = [self keyForState:UIControlStateNormal];
+                [super setBackgroundColor:[self.colors valueForKey:normalKey]];
+            }
+        }
+    }
+}
+- (void)setSelected:(BOOL)selected
+{
+    // Do original Selected
+    [super setSelected:selected];
+    // Select with new colour OR replace with orignial
+    NSString *selectedKey = [self keyForState:UIControlStateSelected];
+    UIColor *selectedColor = [self.colors valueForKey:selectedKey];
+    if (selected && selectedColor) {
+        [super setBackgroundColor:selectedColor];
+    } else {
+        NSString *normalKey = [self keyForState:UIControlStateNormal];
+        [super setBackgroundColor:[self.colors valueForKey:normalKey]];
+    }
+}
+- (NSString *)keyForState:(UIControlState)state
+{
+    return [NSString stringWithFormat:@"state_%zd", state];
+}
+
 
 @end

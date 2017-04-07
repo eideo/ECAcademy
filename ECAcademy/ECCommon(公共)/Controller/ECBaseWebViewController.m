@@ -159,7 +159,6 @@
     CGRect barFrame = CGRectMake(0, kNavHeight - progressBarHeight - kStateBarHeight, kECScreenWidth, progressBarHeight);
     _progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
     _progressView.hidden = YES;
-    //_progressView.backgroundColor = kECGreenColor3;
     _progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 }
 

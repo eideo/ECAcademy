@@ -6,6 +6,10 @@
 //  Copyright © 2017年 dentalink. All rights reserved.
 //
 
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓IBOutlet↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑IBOutlet↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
@@ -23,9 +27,13 @@
 #import "AFNetworking.h"
 #import "UIViewController+ECCommonMethods.h"
 #import "UIView+Extension.h"
+#import "UIButton+Extension.h"
 #import "ECBottomPopView.h"
 #import "ECBaseTabbarViewController.h"
 #import "ECBaseNavController.h"
 #import "ECBaseViewController.h"
-
+#import "ECBaseNavController+Login.h"
+#import "ECUser+Manager.h"
+#import "NSObject+AOP.h"
+#import "MJRefresh.h"
 #endif /* PrefixHeader_pch */

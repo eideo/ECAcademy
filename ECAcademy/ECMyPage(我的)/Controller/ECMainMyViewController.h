@@ -6,8 +6,8 @@
 //  Copyright © 2017年 dentalink. All rights reserved.
 //
 
-#import "ECBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ECMainMyViewController : ECBaseViewController
+@interface ECMainMyViewController : UITableViewController
 
 @end

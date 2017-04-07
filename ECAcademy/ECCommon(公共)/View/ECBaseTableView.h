@@ -35,6 +35,7 @@ typedef void(^RefreshTable)();
 // ---可选
 @property (nonatomic,copy)NSString *cellid;
 @property(nonatomic,assign)CGFloat cellHeight;
+@property(nonatomic,assign)CGFloat sectionHeight;
 @property (nonatomic,copy)CellHeightBlock cellHeightBlock;
 @property (nonatomic,copy)RefreshTable refreshTable;
 //header 和 footer 的 高度 和 View
